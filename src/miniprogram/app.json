@@ -13,15 +13,15 @@
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarBackgroundColor": "#E6E6FA",
+    "navigationBarTitleText": "任务管理清单",
     "navigationBarTextStyle": "black"
   },
   "tabBar":{
     "list":[
       {
         "pagePath":"pages/index/index",
-        "text":"清单",
+        "text":"任务清单",
         "iconPath":"images/checklist.png",
         "selectedIconPath":"images/checklist.png"
       },
