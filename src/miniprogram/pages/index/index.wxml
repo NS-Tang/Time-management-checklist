@@ -1,6 +1,6 @@
 <!--miniprogram/pages/ui.wxml-->
 <view class="a">
-  <input class="c" type="text" placeholder="代办"></input>
+  <input class="c" type="text" placeholder="待办"></input>
   <view class="a1">
   <button class="b1"></button>
   <input  class="t1" type="text"></input>
@@ -67,7 +67,7 @@
   </view>
   <view></view>
 
-  <view class="a3"  style="position:fixed; bottom:1px;width: 320px;">
+  <view class="a3"  style="position:fixed; bottom:0px;">
   <input class="t2" type="text" placeholder="准备做什么？"></input>
   <button class="b2"></button>
   </view>

@@ -23,13 +23,13 @@
         "pagePath":"pages/index/index",
         "text":"任务清单",
         "iconPath":"images/checklist.png",
-        "selectedIconPath":"images/checklist.png"
+        "selectedIconPath":"images/checklist1.png"
       },
       {
         "pagePath": "pages/calendar/calendar",
         "text": "行事历",
         "iconPath": "images/calendar.png",
-        "selectedIconPath": "images/calendar.png"
+        "selectedIconPath": "images/calendar1.png"
       }
     ]
   },

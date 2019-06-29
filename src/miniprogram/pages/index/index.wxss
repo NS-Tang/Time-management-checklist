@@ -7,7 +7,7 @@
 
 /*一行view*/
 .a1{
-  width: 300px;
+  width: 100%;
   text-align: left;
   border: solid gray;
   display:flex;
@@ -36,23 +36,26 @@
 
 /*文本*/
 .c{
-  background-color:aqua;
+  background-color:#E0FFFF;
 }
 
 /*底部文本框及按钮*/
 .a3{
   background-color:#aaa;
   display:flex;
-  height:40px;
+  height:30px;
+  width:100%;
+  border: solid;
 }
 .b2{
   border:solid;
-  height:40px;
+  height:30px;
+  width:10%;
   background: aliceblue;
 }
 .t2{
   width:90%;
-  height:40px;
+  height:30px;
   background: aliceblue;
   border:solid;
 }
