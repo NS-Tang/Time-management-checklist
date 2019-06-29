@@ -1,0 +1,13 @@
+{
+  // triggers 字段是触发器数组，目前仅支持一个触发器，即数组只能填写一个，不可添加多个
+  "triggers": [
+    {
+      // name: 触发器的名字，规则见下方说明
+      "name": "myTrigger",
+      // type: 触发器类型，目前仅支持 timer (即 定时触发器)
+      "type": "timer",
+      // config: 触发器配置，在定时触发器下，config 格式为 cron 表达式，规则见下方说明
+      "config": cron
+    }
+  ]
+}
