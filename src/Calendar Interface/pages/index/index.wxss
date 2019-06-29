@@ -1,0 +1,269 @@
+@import "../../calendar/calendar.wxss";
+
+.wrapper {
+    padding-bottom: 160rpx;
+    /* 下方的内边距 */
+}
+
+.show-data-bag {
+    background: #f8f8ff
+}
+.show-date {
+  /* 外边距 */
+    margin: 30rpx 0;
+    /* 文本对齐方式 */
+    text-align: center;
+    /* 字体的大小 */
+    font-size: 45rpx;
+    /* 文本的粗细 */
+    /* font-weight: lighter; */
+    /* 字体颜色 */
+    color: #d3d3d3;
+    padding: 20rpx
+
+}
+
+.common-list .item {
+  /* 内容溢出元素框时发生的事情：内容会被修剪，并且其余内容不可见 */
+    overflow: hidden
+}
+.common-list .item:active {
+  /* 背景颜色 */
+    background: white
+}
+.common-list .item .inner {
+  /* 生成相对定位的元素，相对于其正常位置进行定位。因此，“left：10rpx会向元素的left位置添加10像素 */
+    position: relative;
+  /* 上边框 ：宽度 实线边界 颜色 */
+    border-top: 2rpx solid transparent;
+    /* 外边距 */
+    margin: 0 40rpx;
+    /* 内边距 */
+    padding: 20rpx 0;
+    /* 元素最小高度 */
+    min-height: 50rpx;
+}
+
+.common-list .header {
+    border-top: 2rpx solid transparent;
+    margin: 0 40rpx;
+    padding: 20rpx 0;
+    color: #AAA;
+    font-size: 30rpx;
+}
+
+/* icon 图表组件 */
+.common-list .item .icon {
+  /* absolute 生成绝对定位的元素 相对于static定位以外的第一个父元素进行定位。元素的位置通过"left""right""top""bottom"属性来定义*/
+    position: absolute;
+    left: 0;
+    top: 20rpx;
+    width: 100rpx;
+    height: 100rpx;
+}
+.common-list .item .inner.with-check .checker {
+    position: absolute;
+    /* 指定容器为flex布局 */
+    display: flex;
+    /* 主轴对齐属性：居中对齐 */
+    justify-content: center;
+    /* 侧轴对齐属性：上下居中对齐 */
+    align-items: center;
+
+    left: 0;
+    top: 10rpx;
+    bottom: 10rpx;
+    width: 80rpx;
+    /* 右边框： 宽度 实线边界 颜色 */
+    border-right: 2rpx solid transparent;
+}
+.common-list .item .inner.with-check .icon {
+    left:50rpx;
+}
+.common-list .item .content {
+    margin-left: 20rpx;
+}
+.common-list .item .inner.with-check .content{
+    margin-left: 100rpx;
+}
+.common-list .item .title {
+  /* 使段落生出行内框：此元素将显示为块级元素，此元素前后会带有换行符 */
+    display: block;
+  /* 内容溢出元素框时发生的事情：内容会被修剪，并且其余内容不可见 */
+    overflow: hidden;
+    /* 设置如何处理元素内的空白：空白会被浏览器忽略 */
+    white-space:nowrap;
+    /* 文本溢出元素时发生的事情：显示省略符号来代替被修剪的文本 */
+    text-overflow: ellipsis;
+    /* 字体粗细 */
+    font-weight: normal;
+    /* 字体大小 */
+    font-size: 32rpx;
+    /* 上部外边距 */
+    margin-top: 13rpx;
+}
+
+
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 1100;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 600rpx;
+    min-height: 200rpx;
+    margin-left: -300rpx;
+    margin-top: -200rpx;
+    background-color: #FFF;
+    /* 圆角边框半径  */
+    border-radius: 10rpx;
+    /* 设置元素的堆叠顺序：高的在前 */
+    z-index: 1200;
+    color: #555;
+}
+.modal .content {
+    overflow: hidden;
+    padding: 40rpx;
+    font-size: 38rpx;
+    margin-bottom: 100rpx;
+}
+.modal .content .input {
+    padding: 20rpx;
+    font-size: 38rpx;
+    border: 2prx solid #617fdf
+}
+.modal .footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100rpx;
+    border-radius: 0 0 10rpx 10rpx;
+    overflow: hidden;
+    background: #f9f9f9;
+}
+.modal .footer .btn {
+    height: 100rpx;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36rpx;
+    background-color: #EEE;
+    color: #555;
+}
+.modal .footer .btn:active {
+    background-color: #DDD;
+}
+
+/* .modal .level {
+    display: flex;
+    align-items: center;
+    font-size: 32rpx;
+    padding: 20rpx;
+}
+.modal .level icon {
+    margin-left: 20rpx;
+}
+ */
+
+/*action sheet*/
+.actionItem  {
+    color: #555;
+    font-size: 36rpx;
+}
+.actionItem.cancel {
+    color: #888
+}
+
+
+/*update panel style*/
+.updatePanel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: whitesmoke;
+    overflow: hidden;
+    z-index: 1000
+}
+.updatePanel .title {
+    font-size: 48rpx;
+    font-weight: lighter;
+    text-align: center;
+    padding: 20rpx 0;
+    margin-bottom: 20rpx;
+}
+.updatePanel input,
+.updatePanel textarea {
+    background: #eeeff3;
+    padding: 20rpx;
+    font-size: 36rpx;
+    width: auto;
+    color: #7a7a7f;
+}
+.updatePanel textarea {
+    border-top: 2rpx solid #747478;
+}
+
+/* .updatePanel .level {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100rpx;
+    bottom: 100rpx;
+    border-top: 2rpx solid #333;
+    padding: 20rpx 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.updatePanel .level .item {
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    margin: 0 60rpx;
+} */
+.updatePanel .footer {
+    position: fixed;
+    display: flex;
+    left: 0;
+    height: 100rpx;
+    right: 0;
+    bottom: 0;
+    padding: 15rpx;
+    /* border: 2rpx solid #333;  */
+    background: #f9f9f9;
+}
+.updatePanel .footer .btn {
+    flex: 1;
+    text-align: center;
+    line-height: 100rpx;
+    font-size: 36rpx;
+    color: #0b0e1d;
+    background: #eaedf4;
+    border-radius: 20rpx;
+   
+}
+.updatePanel .footer .btn:active {
+    background: #333;
+}
+.updatePanel .footer .btn.primary {
+    background: #9bb1fc;
+    color: #fffaff;
+    /* padding: 10rpx; */
+     margin-left: 8rpx;
+}
+/* ?? */
+.updatePanel .footer .btn.primary:active {
+    background: #D64343
+}

@@ -1,0 +1,156 @@
+.og-calendar {
+  /* 背景颜色 */
+    background-color: white;
+    color: black;
+    /* 内边距 */
+    padding: 0 0 20rpx 0;
+}
+.og-calendar .header {
+  /* 生成相对定位的元素，相对于其正常位置进行定位。因此，“left：10rpx会向元素的left位置添加10像素 */
+    position: relative;
+    height: 120rpx;
+    /* 行高 */
+    line-height: 120rpx;
+    /* 字体的大小 */
+    font-size: 35rpx;
+    /* 文本对齐方式 */
+    text-align: center;
+
+    background: #617fdf
+}
+.og-calendar .header .month-pre,
+.og-calendar .header .month-next {
+    position: absolute;
+    top: 0;
+    width: 120rpx;
+    height: 120rpx
+}
+.og-calendar .header .btn:active {
+    background: #7c7cce
+}
+.og-calendar .header .month-pre {
+    left: 0;
+}
+.og-calendar .header .month-next {
+    right: 0;
+}
+.og-calendar .header .month-pre image,
+.og-calendar .header .month-next image {
+  /* 上部外边距 */
+    margin-top: 30rpx;
+    width: 60rpx;
+    height: 60rpx;
+}
+.og-calendar .header .date-info text{
+    font-weight: 600;
+    color: white
+}
+
+
+.og-calendar .week {
+    /* border-top: 2rpx solid #333; */
+    border-bottom: 2rpx solid #dcdcdc;
+}
+
+.og-calendar .col {
+    width: 14.28571428571429%;
+    /* 行内元素使用flex布局 */
+    display: inline-flex;
+    /* 主轴对齐属性：居中对齐 */
+    justify-content: center;
+    /* 文本对齐方式 */
+    text-align: center;
+    /* 内边距 */
+    padding: 15rpx 0;
+}
+.og-calendar .col text {
+  /* 使段落生出行内框：此元素将显示为块级元素，此元素前后会带有换行符 */
+    display: block;
+    width: 60rpx;
+    height: 60rpx;
+  /* 字体大小 */
+    font-size: 32rpx;
+    font-weight: 600;
+    line-height: 60rpx;
+    /* 边框：宽度 实线边界 颜色透明 */
+    border: 2rpx solid transparent;
+}
+.og-calendar .body .col text {
+  /* 圆角边框半径 50%是四分之一圆 */
+    border-radius: 50%;
+}
+/* 点击之后的边框 */
+.og-calendar .body .col.active text {
+  background-color:black;
+    color: #FFF;
+    /* border-color: #7B68EE; */
+}
+.og-calendar .body .col.old {
+    color: #7A7A7F
+} 
+.og-calendar .body .col.current text,
+.og-calendar .body .col text:active {
+    background-color:#617fdf;
+    color: #FFF;
+}
+
+
+/*.og-picker {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -300rpx;
+    margin-top: -320rpx;
+    width: 600rpx;
+    height: 620rpx;
+    background: #FFF;
+    border-radius: 10rpx;
+    overflow: hidden;
+    color: #555;
+}
+.og-picker .button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100rpx;
+    font-size: 32rpx;
+    line-height: 100rpx;
+    border-top: 2rpx solid #EEE;
+    text-align: center;
+    border-radius: 0 0 10rpx 10rpx;
+}
+.og-picker .button:active {
+    background: #FAFAFA;
+}
+.og-picker .content {
+    position: absolute;
+    top: 20rpx;
+    left: 0;
+    right: 0;
+    bottom: 100rpx;
+    overflow: hidden;
+}
+.og-picker .scroll-left,
+.og-picker .scroll-right {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+}
+.og-picker .scroll-left {
+    left: 0;
+}
+.og-picker .scroll-right {
+    left: 50%;
+}
+
+.scroll-view-item  {
+    text-align: center;
+    line-height: 80rpx;
+    height: 80rpx;
+}
+.scroll-view-item:active,
+.scroll-view-item.current {
+    background: #EEE;
+}*/
