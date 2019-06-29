@@ -1,4 +1,4 @@
-// miniprogram/pages/ui.js
+// pages/calendar/calendar.js
 Page({
 
   /**
