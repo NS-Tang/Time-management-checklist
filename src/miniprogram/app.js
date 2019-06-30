@@ -14,7 +14,7 @@ App({
     this.globalData = {}
   },
 
-/*    getUserInfo(cb) {
+   getUserInfo(cb) {
     if (typeof cb !== "function") return;
     let that = this;
     if (that.globalData.userInfo) {
@@ -36,6 +36,6 @@ App({
   //自定义配置
   settings: {
     debug: true, //是否调试模式
-  } */
+  }
 })
 

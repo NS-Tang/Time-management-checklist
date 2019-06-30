@@ -1,8 +1,5 @@
 import DataService from '../../datas/DataService';
-<<<<<<< Updated upstream
-=======
 // import { LEVEL } from '../../datas/Config';
->>>>>>> Stashed changes
 import { promiseHandle, log, formatNumber } from '../../utils/util';
 
 Page({
@@ -24,7 +21,6 @@ Page({
     // levelSelectedValue: LEVEL.normal,
     // levelSelectData: [LEVEL.normal, LEVEL.warning, LEVEL.danger],
 
-    //更新面板数据
     // updatePanel 数据
     updatePanelTop: 10000,
     updatePanelAnimationData: {},
@@ -52,7 +48,6 @@ Page({
     loadItemListData.call(this);
   },
 
-// 日历选择器的改变响应函数
   datePickerChangeEvent(e) {
     const date = new Date(Date.parse(e.detail.value));
     changeDate.call(this, new Date(date.getFullYear(), date.getMonth(), 1));
@@ -134,7 +129,12 @@ Page({
     this.setData({ todoTextAreaValue: value });
   },
 
-
+/*   // 选择事项等级事件  
+  levelClickEvent(e) {
+    const { level } = e.currentTarget.dataset;
+    this.setData({ levelSelectedValue: level });
+  },
+ */
   // 保存事项数据
   saveDataEvent() {
     const { todoInputValue, todoTextAreaValue } = this.data;
@@ -144,10 +144,7 @@ Page({
       let promise = new DataService({
         title: todoInputValue,
         content: todoTextAreaValue,
-<<<<<<< Updated upstream
-=======
         // level: levelSelectedValue,
->>>>>>> Stashed changes
         year: year,
         month: parseInt(month) - 1,
         date: date
@@ -156,10 +153,7 @@ Page({
         //清空表单
         this.setData({
           todoTextAreaValue: '',
-<<<<<<< Updated upstream
-=======
           // levelSelectedValue: LEVEL.normal,
->>>>>>> Stashed changes
           todoInputValue: ''
         });
         loadItemListData.call(this);

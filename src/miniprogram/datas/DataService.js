@@ -80,11 +80,7 @@ class DataSerivce {
     }
 
     _checkProps() {
-<<<<<<< Updated upstream
-        return this.title  && this.date && this.year && this.month;
-=======
         return this.title && this.date && this.year && this.month;
->>>>>>> Stashed changes
     }
 }
 

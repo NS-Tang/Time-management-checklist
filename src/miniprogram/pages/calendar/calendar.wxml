@@ -2,13 +2,11 @@
 <view class="wrapper">
   <view class="og-calendar">
     <view class="header">
-      <view class="btn month-pre" bindtap="changeDateEvent" data-year="{{data.beforeYear}}" data-month="{{data.beforMonth}}"> 
+      <view class="btn month-pre" bindtap="changeDateEvent" data-year="{{data.beforeYear}}" data-month="{{data.beforMonth}}">
         <image src="../../images/prepage.png"></image>
       </view>
       <view class="date-info">
-        <!-- 日期选择器 -->
         <picker mode="date" fields="month" value="{{pickerDateValue}}" bindchange="datePickerChangeEvent">
-          <!-- 规定了年月的格式 月份为一位时前面加零 -->
           <text wx:if="{{data.showYear}}">{{data.showYear}}年{{data.showMonth > 9 ? data.showMonth : ('0' + data.showMonth)}}月</text>
           <text wx:if="{{!data.showYear}}">请选择日期</text>
         </picker>
@@ -40,20 +38,20 @@
         <text>日</text>
       </view>
     </view>
-    <view class="body row">  
+    <view class="body row">
       <block wx:for="{{data.dates}}" wx:key="_id">
         <view bindtap="dateClickEvent" data-year="{{item.year}}" data-month="{{item.month}}" data-date="{{item.date}}" class="col {{data.showMonth == item.month ? '' : 'old'}} {{data.currentDate == item.date && data.currentYear==item.year && data.currentMonth == item.month ? 'current' : ''}} {{item.active ? 'active' : ''}}">
           <text>{{item.date}}</text>
-        </view> 
+        </view>
       </block>
     </view>
   </view>
 
-<view class='show-data-bag'> 
-  <view class="show-date">
-    <text>{{data.selectDateText}}</text>
+  <view class='show-data-bag'>
+    <view class="show-date">
+      <text>{{data.selectDateText}}</text>
+    </view>
   </view>
-</view>
 
   <view class="common-list">
     <view class="header" wx:if="{{itemList.length > 0}}">
@@ -67,7 +65,7 @@
             <icon type="circle" wx:if="{{!item.checked}}" color="black" size="20" />
             <icon type="success" wx:else color="#9bb1fc" size="20" />
           </view>
- <!--          <image wx:if="{{item.level == 1}}" class="icon" src="../../images/success.png" />
+          <!--          <image wx:if="{{item.level == 1}}" class="icon" src="../../images/success.png" />
           <image wx:if="{{item.level == 2}}" class="icon" src="../../images/notice.png" />
           <image wx:if="{{item.level == 3}}" class="icon" src="../../images/fav-round.png" /> -->
           <view class="content">
@@ -75,7 +73,7 @@
           </view>
         </view>
       </view>
-    </block> 
+    </block>
 
     <view class="header text-center" wx:if="{{!itemList || itemList.length <= 0}}">
       <text>当前日期没有事项记录</text>
@@ -112,20 +110,17 @@
   </view>
   <view class="footer">
     <!--<view class="btn cancel" bindtap="closeAddModalEvent"><text>取消</text></view>-->
-    <view class="btn" bindtap="closeModalEvent"><text>确认</text></view>
+    <view class="btn" bindtap="closeModalEvent">
+      <text>确认</text>
+    </view>
   </view>
 </view>
 
 <view class="updatePanel" style="top: {{updatePanelTop}}px;height:{{updatePanelTop}}px" animation="{{updatePanelAnimationData}}">
   <!--<view class="title"><text>添加事项</text></view>-->
-<<<<<<< Updated upstream
-  <input placeholder="请输入事项标题" value="{{todoInputValue}}" bindchange="todoInputChangeEvent" />
-  <textarea placeholder="请输入事项内容" value="{{todoTextAreaValue}}" bindblur="todoTextAreaChangeEvent"></textarea>
-=======
   <input placeholder="请输入事项时间，格式：HH:MM" value="{{todoInputValue}}" bindchange="todoInputChangeEvent" />
   <textarea placeholder="请输入事项内容" value="{{todoTextAreaValue}}" bindblur="todoTextAreaChangeEvent"></textarea>
   
->>>>>>> Stashed changes
   <!-- <view class="level">
     <block wx:for="{{levelSelectData}}" wx:key="*this">
       <view bindtap="levelClickEvent" data-level="{{item}}" class="item {{item == 1 ? 'border-normal' : ''}} {{item == 2 ? 'border-warning' : '' }} {{item == 3 ? 'border-danger' : ''}} {{item == levelSelectedValue && item == 1 ? 'bg-normal' : ''}} {{item == levelSelectedValue && item == 2 ? 'bg-warning' : ''}} {{item == levelSelectedValue && item == 3 ? 'bg-danger' : ''}}"></view>
