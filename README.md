@@ -1,0 +1,3 @@
+# Time-management-checklist
+微信小程序云开发-时间管理清单
+如果在你pull代码下来之后master分支没有过任何commit，并且你确定没同时和别人在改同一个文件的情况下可以提交到master分支，不如说最好提交到master分支。
