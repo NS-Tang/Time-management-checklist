@@ -1,7 +1,1 @@
 /* pages/deployFunctions/deployFunctions.wxss */
-
-@import "../../style/guide.wxss";
-
-.black {
-  color: black;
-}

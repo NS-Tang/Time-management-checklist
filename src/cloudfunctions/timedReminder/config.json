@@ -7,7 +7,7 @@
       // type: 触发器类型，目前仅支持 timer (即 定时触发器)
       "type": "timer",
       // config: 触发器配置，在定时触发器下，config 格式为 cron 表达式，规则见下方说明
-      "config": cron
+      "config": "0 */1 * * * * *"
     }
   ]
 }
