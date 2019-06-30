@@ -13,9 +13,9 @@
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#E6E6FA",
+    "navigationBarBackgroundColor": "#617fdf",
     "navigationBarTitleText": "任务管理清单",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "tabBar":{
     "list":[
