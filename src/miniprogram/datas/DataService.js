@@ -1,5 +1,7 @@
 import DataRepository from 'DataRepository';
-import {promiseHandle} from '../utils/util';
+import {
+  promiseHandle
+} from '../utils/util';
 
 /**
  * 数据业务类
@@ -32,56 +34,58 @@ class DataSerivce {
                 addDate: new Date().getTime()
             });
         }
-    }
 
-    /**
-     * 获取所有事项数据
-     */
-    static findAll() {
-        return DataRepository.findAllData()
-            .then(data => data.data ? data.data : []);
     }
+  }
 
-    /**
-     * 通过id获取事项
-     */
-    static findById(id) {
-        return DataRepository.findBy(item => item['_id'] == id)
-            .then(items => (items && items.length > 0) ? items[0] : null); 
-    }
+  /**
+   * 获取所有事项数据
+   */
+  static findAll() {
+    return DataRepository.findAllData()
+      .then(data => data.data ? data.data : []);
+  }
 
-    /**
-     * 根据id删除事项数据
-     */
-    delete() {
-        return DataRepository.removeData(this.id);
-    }
+  /**
+   * 通过id获取事项
+   */
+  static findById(id) {
+    return DataRepository.findBy(item => item['_id'] == id)
+      .then(items => (items && items.length > 0) ? items[0] : null);
+  }
 
-    /**
-     * 批量删除数据
-     * @param {Array} ids 事项Id集合
-     */
-    static deleteRange(ids) {
-        return DataRepository.removeRange(ids);
-    }
+  /**
+   * 根据id删除事项数据
+   */
+  delete() {
+    return DataRepository.removeData(this.id);
+  }
 
-    /**
-     * 根据日期查找所有符合条件的事项记录
-     * @param {Date} date 日期对象
-     * @returns {Array} 事项集合
-     */
-    static findByDate(date) {
-        if (!date) return [];
-        return DataRepository.findBy(item => {
-            return item && item['date'] == date.getDate() &&
-                item['month'] == date.getMonth() &&
-                item['year'] == date.getFullYear();
-        }).then(data => data);
-    }
+  /**
+   * 批量删除数据
+   * @param {Array} ids 事项Id集合
+   */
+  static deleteRange(ids) {
+    return DataRepository.removeRange(ids);
+  }
+
+  /**
+   * 根据日期查找所有符合条件的事项记录
+   * @param {Date} date 日期对象
+   * @returns {Array} 事项集合
+   */
+  static findByDate(date) {
+    if (!date) return [];
+    return DataRepository.findBy(item => {
+      return item && item['date'] == date.getDate() &&
+        item['month'] == date.getMonth() &&
+        item['year'] == date.getFullYear();
+    }).then(data => data);
+  }
 
     _checkProps() {
         return this.title && this.date && this.year && this.month;
     }
-}
+
 
 module.exports = DataSerivce;

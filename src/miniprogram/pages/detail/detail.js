@@ -8,13 +8,16 @@ Page({
         // levelSelectData: [LEVEL.normal, LEVEL.warning, LEVEL.danger],
     },
 
-    onLoad(option) {
-        const {id} = option;
-        let item = DataService.findById(id).then((item) => {
-            item['addDate'] = getDateStr(new Date(item['addDate']));
-            this.setData({
-                item: item
-            });
-        });
-    }
+
+  onLoad(option) {
+    const {
+      id
+    } = option;
+    let item = DataService.findById(id).then((item) => {
+      item['addDate'] = getDateStr(new Date(item['addDate']));
+      this.setData({
+        item: item
+      });
+    });
+  }
 });
