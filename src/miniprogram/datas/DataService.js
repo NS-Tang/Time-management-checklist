@@ -28,7 +28,7 @@ class DataSerivce {
                 year: this.year,
                 month: this.month,
                 date: this.date,
-                level: this.level,
+                // level: this.level,
                 addDate: new Date().getTime()
             });
         }
@@ -80,7 +80,7 @@ class DataSerivce {
     }
 
     _checkProps() {
-        return this.title && this.level && this.date && this.year && this.month;
+        return this.title  && this.date && this.year && this.month;
     }
 }
 

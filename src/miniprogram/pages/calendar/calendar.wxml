@@ -6,7 +6,9 @@
         <image src="../../images/prepage.png"></image>
       </view>
       <view class="date-info">
+        <!-- 日期选择器 -->
         <picker mode="date" fields="month" value="{{pickerDateValue}}" bindchange="datePickerChangeEvent">
+          <!-- 规定了年月的格式 月份为一位时前面加零 -->
           <text wx:if="{{data.showYear}}">{{data.showYear}}年{{data.showMonth > 9 ? data.showMonth : ('0' + data.showMonth)}}月</text>
           <text wx:if="{{!data.showYear}}">请选择日期</text>
         </picker>
