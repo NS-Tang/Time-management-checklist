@@ -1,11 +1,11 @@
 import DataService from '../../datas/DataService';
 import {getDateStr} from '../../utils/util';
-import {LEVEL} from '../../datas/Config';
+// import {LEVEL} from '../../datas/Config';
 
 Page({
     data: {
         item: '',
-        levelSelectData: [LEVEL.normal, LEVEL.warning, LEVEL.danger],
+        // levelSelectData: [LEVEL.normal, LEVEL.warning, LEVEL.danger],
     },
 
     onLoad(option) {

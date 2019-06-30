@@ -1,4 +1,8 @@
 import DataService from '../../datas/DataService';
+<<<<<<< Updated upstream
+=======
+// import { LEVEL } from '../../datas/Config';
+>>>>>>> Stashed changes
 import { promiseHandle, log, formatNumber } from '../../utils/util';
 
 Page({
@@ -135,11 +139,15 @@ Page({
   saveDataEvent() {
     const { todoInputValue, todoTextAreaValue } = this.data;
     const { year, month, date } = this.data.data.selected;
+    console.log(todoInputValue);
     if (todoInputValue !== '') {
-
       let promise = new DataService({
         title: todoInputValue,
         content: todoTextAreaValue,
+<<<<<<< Updated upstream
+=======
+        // level: levelSelectedValue,
+>>>>>>> Stashed changes
         year: year,
         month: parseInt(month) - 1,
         date: date
@@ -148,6 +156,10 @@ Page({
         //清空表单
         this.setData({
           todoTextAreaValue: '',
+<<<<<<< Updated upstream
+=======
+          // levelSelectedValue: LEVEL.normal,
+>>>>>>> Stashed changes
           todoInputValue: ''
         });
         loadItemListData.call(this);

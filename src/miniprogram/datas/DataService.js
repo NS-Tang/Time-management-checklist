@@ -13,14 +13,14 @@ class DataSerivce {
         this.date = props['date'] || '';
         this.month = props['month'] || '';
         this.year = props['year'] || '';
-        this.level = props['level'] || '';
+        // this.level = props['level'] || '';
         this.title = props['title'] || '';
     }
 
     /**
      * 保存当前对象数据
      */
-    save() {
+  save() {
         if (this._checkProps()) {
             return DataRepository.addData({
                 title: this.title,
@@ -80,7 +80,11 @@ class DataSerivce {
     }
 
     _checkProps() {
+<<<<<<< Updated upstream
         return this.title  && this.date && this.year && this.month;
+=======
+        return this.title && this.date && this.year && this.month;
+>>>>>>> Stashed changes
     }
 }
 

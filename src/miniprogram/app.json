@@ -8,6 +8,7 @@
     "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib",
     "pages/calendar/calendar",
+    "pages/detail/detail",
     "pages/openapi/openapi" 
   ],
   "window": {
