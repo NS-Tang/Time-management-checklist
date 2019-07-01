@@ -102,20 +102,19 @@
 
 </view>
 
-<view class="mask" hidden="{{!isMaskShow}}"></view>
+<!-- <view class="mask" hidden="{{!isMaskShow}}"></view> -->
 
-<view class="modal" hidden="{{!isModalShow}}">
+<!-- <view class="modal" hidden="{{!isModalShow}}">
   <view class="content">
     {{modalMsg}}
   </view>
   <view class="footer">
     <!--<view class="btn cancel" bindtap="closeAddModalEvent"><text>取消</text></view>-->
-    <view class="btn" bindtap="closeModalEvent">
+  <!--   <view class="btn" bindtap="closeModalEvent">
       <text>确认</text>
     </view>
   </view>
-</view>
-
+</view> -->
 <view class="updatePanel" style="top: {{updatePanelTop}}px;height:{{updatePanelTop}}px" animation="{{updatePanelAnimationData}}">
   <!--<view class="title"><text>添加事项</text></view>-->
   <input placeholder="请输入事项时间，格式：HH:MM" value="{{todoInputValue}}" bindchange="todoInputChangeEvent" />
