@@ -1,5 +1,5 @@
 import DataService from '../../datas/DataService';
-import { LEVEL } from '../../datas/Config';
+// import { LEVEL } from '../../datas/Config';
 import { promiseHandle, log, formatNumber } from '../../utils/util';
 
 Page({
@@ -137,14 +137,14 @@ Page({
  */
   // 保存事项数据
   saveDataEvent() {
-    const { todoInputValue, todoTextAreaValue, levelSelectedValue } = this.data;
+    const { todoInputValue, todoTextAreaValue } = this.data;
     const { year, month, date } = this.data.data.selected;
+    console.log(todoInputValue);
     if (todoInputValue !== '') {
-
       let promise = new DataService({
         title: todoInputValue,
         content: todoTextAreaValue,
-        level: levelSelectedValue,
+        // level: levelSelectedValue,
         year: year,
         month: parseInt(month) - 1,
         date: date
@@ -153,7 +153,6 @@ Page({
         //清空表单
         this.setData({
           todoTextAreaValue: '',
-          levelSelectedValue: LEVEL.normal,
           todoInputValue: ''
         });
         loadItemListData.call(this);

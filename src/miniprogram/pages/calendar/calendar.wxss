@@ -44,6 +44,7 @@
     min-height: 50rpx;
 }
 
+/* 事项信息 */
 .common-list .header {
     border-top: 2rpx solid transparent;
     margin: 0 40rpx;
@@ -61,6 +62,7 @@
     width: 100rpx;
     height: 100rpx;
 }
+
 .common-list .item .inner.with-check .checker {
     position: absolute;
     /* 指定容器为flex布局 */
@@ -75,7 +77,7 @@
     bottom: 10rpx;
     width: 80rpx;
     /* 右边框： 宽度 实线边界 颜色 */
-    border-right: 2rpx solid transparent;
+    /* border-right: 2rpx solid red; */
 }
 .common-list .item .inner.with-check .icon {
     left:50rpx;
@@ -103,8 +105,9 @@
     margin-top: 13rpx;
 }
 
-
-.mask {
+/* 
+/* 不知道写的什么 */
+/* .mask {
     position: fixed;
     top: 0;
     left: 0;
@@ -112,9 +115,9 @@
     bottom: 0;
     background: rgba(0, 0, 0, .5);
     z-index: 1100;
-}
+} */
 
-.modal {
+/* .modal {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -124,12 +127,12 @@
     margin-top: -200rpx;
     background-color: #FFF;
     /* 圆角边框半径  */
-    border-radius: 10rpx;
+    /* border-radius: 10rpx;
     /* 设置元素的堆叠顺序：高的在前 */
-    z-index: 1200;
+    /* z-index: 1200;
     color: #555;
-}
-.modal .content {
+}  */ 
+/* .modal .content {
     overflow: hidden;
     padding: 40rpx;
     font-size: 38rpx;
@@ -149,8 +152,8 @@
     border-radius: 0 0 10rpx 10rpx;
     overflow: hidden;
     background: #f9f9f9;
-}
-.modal .footer .btn {
+} */
+/* .modal .footer .btn {
     height: 100rpx;
     width: 100%;
     display: inline-flex;
@@ -162,7 +165,7 @@
 }
 .modal .footer .btn:active {
     background-color: #DDD;
-}
+} */ 
 
 /* .modal .level {
     display: flex;
@@ -176,13 +179,13 @@
  */
 
 /*action sheet*/
-.actionItem  {
+/* .actionItem  {
     color: #555;
     font-size: 36rpx;
 }
 .actionItem.cancel {
     color: #888
-}
+} */ 
 
 
 /*update panel style*/
@@ -196,13 +199,13 @@
     overflow: hidden;
     z-index: 1000
 }
-.updatePanel .title {
+/* .updatePanel .title {
     font-size: 48rpx;
     font-weight: lighter;
     text-align: center;
     padding: 20rpx 0;
     margin-bottom: 20rpx;
-}
+} */
 .updatePanel input,
 .updatePanel textarea {
     background: #eeeff3;
