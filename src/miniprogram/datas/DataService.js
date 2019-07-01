@@ -8,33 +8,34 @@ import {
  */
 class DataSerivce {
 
-  constructor(props) {
-    props = props || {};
-    this.id = props['_id'] || 0;
-    this.content = props['content'] || '';
-    this.date = props['date'] || '';
-    this.month = props['month'] || '';
-    this.year = props['year'] || '';
-    this.level = props['level'] || '';
-    this.title = props['title'] || '';
-  }
-
-  /**
-   * 保存当前对象数据
-   */
-  save() {
-    if (this._checkProps()) {
-      return DataRepository.addData({
-        title: this.title,
-        content: this.content,
-        year: this.year,
-        month: this.month,
-        date: this.date,
-        level: this.level,
-        addDate: new Date().getTime()
-      });
+    constructor(props) {
+        props = props || {};
+        this.id = props['_id'] || 0;
+        this.content = props['content'] || '';
+        this.date = props['date'] || '';
+        this.month = props['month'] || '';
+        this.year = props['year'] || '';
+        // this.level = props['level'] || '';
+        this.title = props['title'] || '';
     }
-  }
+
+    /**
+     * 保存当前对象数据
+     */
+  save() {
+        if (this._checkProps()) {
+            return DataRepository.addData({
+                title: this.title,
+                content: this.content,
+                year: this.year,
+                month: this.month,
+                date: this.date,
+                // level: this.level,
+                addDate: new Date().getTime()
+            });
+        }
+    }
+  
 
   /**
    * 获取所有事项数据
@@ -81,9 +82,9 @@ class DataSerivce {
     }).then(data => data);
   }
 
-  _checkProps() {
-    return this.title && this.date && this.year && this.month;
-  }
+    _checkProps() {
+        return this.title && this.date && this.year && this.month;
+    }
 }
 
 module.exports = DataSerivce;

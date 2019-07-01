@@ -19,7 +19,7 @@ function formatNumber(n) {
 
 function getDateStr(date) {
   if (!date) return '';
-  return date.getFullYear() + '年' +  (date.getMonth() + 1) + '月' +date.getDate() + '日';
+  return date.getFullYear() + '年' + (date.getMonth() + 1) + '月' + date.getDate() + '日';
 }
 
 /**
@@ -56,7 +56,7 @@ function promiseHandle(func, options) {
   options = options || {};
   return new Promise((resolve, reject) => {
     if (typeof func !== 'function')
-        reject();
+      reject();
     options.success = resolve;
     options.fail = reject;
     func(options);

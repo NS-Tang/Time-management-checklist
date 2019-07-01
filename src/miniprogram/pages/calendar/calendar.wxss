@@ -44,6 +44,7 @@
     min-height: 50rpx;
 }
 
+/* 事项信息 */
 .common-list .header {
     border-top: 2rpx solid transparent;
     margin: 0 40rpx;
@@ -61,6 +62,7 @@
     width: 100rpx;
     height: 100rpx;
 }
+
 .common-list .item .inner.with-check .checker {
     position: absolute;
     /* 指定容器为flex布局 */
@@ -75,7 +77,7 @@
     bottom: 10rpx;
     width: 80rpx;
     /* 右边框： 宽度 实线边界 颜色 */
-    border-right: 2rpx solid transparent;
+    /* border-right: 2rpx solid red; */
 }
 .common-list .item .inner.with-check .icon {
     left:50rpx;
@@ -104,6 +106,7 @@
 }
 
 
+/* 不知道写的什么 */
 .mask {
     position: fixed;
     top: 0;
@@ -196,13 +199,13 @@
     overflow: hidden;
     z-index: 1000
 }
-.updatePanel .title {
+/* .updatePanel .title {
     font-size: 48rpx;
     font-weight: lighter;
     text-align: center;
     padding: 20rpx 0;
     margin-bottom: 20rpx;
-}
+} */
 .updatePanel input,
 .updatePanel textarea {
     background: #eeeff3;
