@@ -153,7 +153,6 @@ Page({
         //清空表单
         this.setData({
           todoTextAreaValue: '',
-          // levelSelectedValue: LEVEL.normal,
           todoInputValue: ''
         });
         loadItemListData.call(this);
