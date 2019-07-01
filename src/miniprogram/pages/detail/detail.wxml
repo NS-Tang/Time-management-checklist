@@ -1,5 +1,5 @@
 <view class="show-item">
-    <view class="title">标题</view>
+    <view class="title">时间</view>
     <view class="content">
         <text>{{item.title}}</text>
     </view>
