@@ -8,3 +8,11 @@ commit的时候用自己的分支，commit完了之后pull request；pull的时�
 pull request 和pull 一点关系都没有，这个pull request指的是request别人pull你的修改，本质上是一个上传请求。
 
 如果在你上一次pull代码下来之后master分支没有过任何commit，最好直接提交到master分支，否则我要花大量时间做几乎没意义的merge。
+
+github desktop使用教程：
+
+add->clone repository 
+
+clone 要clone的项目到本地，路径不要有中文
+
+
