@@ -46,6 +46,7 @@
   display: flex;
   font-size: 13px;
   padding:5px;
+  color: #617fdf;
 }
 
 /*底部文本框及按钮*/
