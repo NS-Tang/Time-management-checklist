@@ -69,7 +69,7 @@
           <image wx:if="{{item.level == 2}}" class="icon" src="../../images/notice.png" />
           <image wx:if="{{item.level == 3}}" class="icon" src="../../images/fav-round.png" /> -->
           <view class="content">
-            <text class="title">{{item.title}}</text>
+            <text class="title">{{item.content}}</text>
           </view>
         </view>
       </view>
