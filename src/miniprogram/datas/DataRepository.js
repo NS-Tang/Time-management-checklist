@@ -1,10 +1,6 @@
 import Config from 'Config';
 import {guid, log, promiseHandle} from '../utils/util';
 
-/* module.exports = {
-  ITEMS_SAVE_KEY: 'todo_item_save_Key'
-}; */
-
 class DataRepository {
 
     /**

@@ -6,9 +6,7 @@
         <image src="../../images/prepage.png"></image>
       </view>
       <view class="date-info">
-        <!-- 日期选择器 -->
         <picker mode="date" fields="month" value="{{pickerDateValue}}" bindchange="datePickerChangeEvent">
-          <!-- 规定了年月的格式 月份为一位时前面加零 -->
           <text wx:if="{{data.showYear}}">{{data.showYear}}年{{data.showMonth > 9 ? data.showMonth : ('0' + data.showMonth)}}月</text>
           <text wx:if="{{!data.showYear}}">请选择日期</text>
         </picker>
@@ -104,25 +102,25 @@
 
 </view>
 
-<view class="mask" hidden="{{!isMaskShow}}"></view>
+<!-- <view class="mask" hidden="{{!isMaskShow}}"></view> -->
 
-<view class="modal" hidden="{{!isModalShow}}">
+<!-- <view class="modal" hidden="{{!isModalShow}}">
   <view class="content">
     {{modalMsg}}
   </view>
   <view class="footer">
     <!--<view class="btn cancel" bindtap="closeAddModalEvent"><text>取消</text></view>-->
-    <view class="btn" bindtap="closeModalEvent">
+  <!--   <view class="btn" bindtap="closeModalEvent">
       <text>确认</text>
     </view>
   </view>
-</view>
-
+</view> -->
 <view class="updatePanel" style="top: {{updatePanelTop}}px;height:{{updatePanelTop}}px" animation="{{updatePanelAnimationData}}">
   <!--<view class="title"><text>添加事项</text></view>-->
   <input placeholder="请输入事项时间，格式：HH:MM" value="{{todoInputValue}}" bindchange="todoInputChangeEvent" />
   <textarea placeholder="请输入事项内容" value="{{todoTextAreaValue}}" bindblur="todoTextAreaChangeEvent"></textarea>
-  <!-- <view class="level">
+
+<!-- <view class="level">
     <block wx:for="{{levelSelectData}}" wx:key="*this">
       <view bindtap="levelClickEvent" data-level="{{item}}" class="item {{item == 1 ? 'border-normal' : ''}} {{item == 2 ? 'border-warning' : '' }} {{item == 3 ? 'border-danger' : ''}} {{item == levelSelectedValue && item == 1 ? 'bg-normal' : ''}} {{item == levelSelectedValue && item == 2 ? 'bg-warning' : ''}} {{item == levelSelectedValue && item == 3 ? 'bg-danger' : ''}}"></view>
     </block>
