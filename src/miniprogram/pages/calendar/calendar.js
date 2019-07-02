@@ -1,11 +1,17 @@
 import DataService from '../../datas/DataService';
 // import { LEVEL } from '../../datas/Config';
-import { promiseHandle, log, formatNumber } from '../../utils/util';
+import {
+  promiseHandle,
+  log,
+  formatNumber
+} from '../../utils/util';
 
 Page({
   data: {
     showMonth: {},
-    data: { showMonth: '' },
+    data: {
+      showMonth: ''
+    },
     selectDateText: '',
     pickerDateValue: '',
 
@@ -54,27 +60,40 @@ Page({
   },
 
   changeDateEvent(e) {
-    const { year, month } = e.currentTarget.dataset;
+    const {
+      year,
+      month
+    } = e.currentTarget.dataset;
     changeDate.call(this, new Date(year, parseInt(month) - 1, 1));
   },
 
   dateClickEvent(e) {
-    const { year, month, date } = e.currentTarget.dataset;
-    const { data } = this.data;
+    const {
+      year,
+      month,
+      date
+    } = e.currentTarget.dataset;
+    const {
+      data
+    } = this.data;
     let selectDateText = '';
 
     data['selected']['year'] = year;
     data['selected']['month'] = month;
     data['selected']['date'] = date;
 
-    this.setData({ data: data });
+    this.setData({
+      data: data
+    });
 
     changeDate.call(this, new Date(year, parseInt(month) - 1, date));
   },
 
   showUpdatePanelEvent() {
     showUpdatePanel.call(this);
-    this.setData({ isEditMode: true });
+    this.setData({
+      isEditMode: true
+    });
   },
 
   closeUpdatePanelEvent() {
@@ -82,26 +101,39 @@ Page({
   },
 
   editClickEvent() {
-    this.setData({ isEditMode: true });
+    this.setData({
+      isEditMode: true
+    });
   },
 
   // 事项列表项长按动作事件
   listItemLongTapEvent(e) {
-    const { isEditMode } = this.data;
-    const { id } = e.currentTarget.dataset;
+    const {
+      isEditMode
+    } = this.data;
+    const {
+      id
+    } = e.currentTarget.dataset;
     let _this = this;
     //如果不是编辑勾选模式下才生效
     if (!isEditMode) {
       const itemList = ['详情', '删除'];
-      promiseHandle(wx.showActionSheet, { itemList: itemList, itemColor: '#2E2E3B' })
+      promiseHandle(wx.showActionSheet, {
+          itemList: itemList,
+          itemColor: '#2E2E3B'
+        })
         .then((res) => {
           if (!res.cancel) {
             switch (itemList[res.tapIndex]) {
               case '详情':
-                wx.navigateTo({ url: '../detail/detail?id=' + id });
+                wx.navigateTo({
+                  url: '../detail/detail?id=' + id
+                });
                 break;
               case '删除':
-                new DataService({ _id: id }).delete().then(() => {
+                new DataService({
+                  _id: id
+                }).delete().then(() => {
                   loadItemListData.call(_this);
                 });
                 break;
@@ -113,32 +145,49 @@ Page({
 
   //取消编辑事件
   cancelEditClickEvent() {
-    this.setData({ isEditMode: false });
+    this.setData({
+      isEditMode: false
+    });
     resetItemListDataCheck.call(this);
   },
 
   // 事项标题文本框变化事件
   todoInputChangeEvent(e) {
-    const { value } = e.detail;
-    this.setData({ todoInputValue: value });
+    const {
+      value
+    } = e.detail;
+    this.setData({
+      todoInputValue: value
+    });
   },
 
   //事项内容多行文本域变化事件
   todoTextAreaChangeEvent(e) {
-    const { value } = e.detail;
-    this.setData({ todoTextAreaValue: value });
+    const {
+      value
+    } = e.detail;
+    this.setData({
+      todoTextAreaValue: value
+    });
   },
 
-/*   // 选择事项等级事件  
-  levelClickEvent(e) {
-    const { level } = e.currentTarget.dataset;
-    this.setData({ levelSelectedValue: level });
-  },
- */
+  /*   // 选择事项等级事件  
+    levelClickEvent(e) {
+      const { level } = e.currentTarget.dataset;
+      this.setData({ levelSelectedValue: level });
+    },
+   */
   // 保存事项数据
   saveDataEvent() {
-    const { todoInputValue, todoTextAreaValue } = this.data;
-    const { year, month, date } = this.data.data.selected;
+    const {
+      todoInputValue,
+      todoTextAreaValue
+    } = this.data;
+    const {
+      year,
+      month,
+      date
+    } = this.data.data.selected;
     console.log(todoInputValue);
     if (todoInputValue !== '') {
       let promise = new DataService({
@@ -166,7 +215,9 @@ Page({
 
   //批量删除事件
   removeRangeTapEvent() {
-    let { itemList } = this.data;
+    let {
+      itemList
+    } = this.data;
     if (!itemList) return;
     let _this = this;
     wx.showModal({
@@ -187,8 +238,12 @@ Page({
   },
 
   listItemClickEvent(e) {
-    const { isEditMode } = this.data;
-    const { id } = e.currentTarget.dataset;
+    const {
+      isEditMode
+    } = this.data;
+    const {
+      id
+    } = e.currentTarget.dataset;
 
     if (!isEditMode) {
       this.listItemLongTapEvent(e); //由于元素的长按和点击事件有冲突，暂时合并在一起，直接调用长按事件
@@ -211,7 +266,10 @@ Page({
       } else {
         editItemList.splice(tIndx, 1);
       }
-      this.setData({ itemList: data, editItemList: editItemList });
+      this.setData({
+        itemList: data,
+        editItemList: editItemList
+      });
     }
   },
 
@@ -279,10 +337,16 @@ function closeUpdatePanel() {
  * 加载事项列表数据
  */
 function loadItemListData() {
-  const { year, month, date } = this.data.data.selected;
+  const {
+    year,
+    month,
+    date
+  } = this.data.data.selected;
   let _this = this;
   DataService.findByDate(new Date(Date.parse([year, month, date].join('-')))).then((data) => {
-    _this.setData({ itemList: data });
+    _this.setData({
+      itemList: data
+    });
   });
 
 }
@@ -295,7 +359,9 @@ function resetItemListDataCheck() {
   for (let i = 0, len = data.length; i < len; i++) {
     data[i]['checked'] = false;
   }
-  this.setData({ itemList: data });
+  this.setData({
+    itemList: data
+  });
 }
 
 /**
@@ -361,7 +427,11 @@ function changeDate(targetDate) {
   if (tDay <= 35)
     afterDayCount += (42 - tDay); //6行7列 = 42
 
-  let selected = this.data.data['selected'] || { year: showYear, month: showMonth, date: showDate };
+  let selected = this.data.data['selected'] || {
+    year: showYear,
+    month: showMonth,
+    date: showDate
+  };
   let selectDateText = selected.year + '年' + formatNumber(selected.month) + '月' + formatNumber(selected.date) + '日';
 
   data = {
@@ -422,6 +492,9 @@ function changeDate(targetDate) {
   data.dates = dates;
 
 
-  this.setData({ data: data, pickerDateValue: showYear + '-' + showMonth });
+  this.setData({
+    data: data,
+    pickerDateValue: showYear + '-' + showMonth
+  });
   loadItemListData.call(this);
 }

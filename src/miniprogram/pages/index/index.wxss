@@ -3,7 +3,7 @@
 /*一行view*/
 .a1{
   text-align: left;
-  border-bottom: solid gray 1px;
+  border-bottom: solid yellow  1px;
   display:flex;
   margin:10px 8px;
   height: 30px;
