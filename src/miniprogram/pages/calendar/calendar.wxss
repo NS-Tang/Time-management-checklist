@@ -6,35 +6,35 @@
 }
 
 .show-data-bag {
-    background: #f8f8ff
+    background: #f8f8ff;
 }
+
 .show-date {
-  /* 外边距 */
+    /* 外边距 */
     margin: 30rpx 0;
     /* 文本对齐方式 */
     text-align: center;
     /* 字体的大小 */
     font-size: 45rpx;
-    /* 文本的粗细 */
-    /* font-weight: lighter; */
-    /* 字体颜色 */
+    /* 文本的粗细 *//* font-weight: lighter; *//* 字体颜色 */
     color: #d3d3d3;
-    padding: 20rpx
-
+    padding: 20rpx;
 }
 
 .common-list .item {
-  /* 内容溢出元素框时发生的事情：内容会被修剪，并且其余内容不可见 */
-    overflow: hidden
+    /* 内容溢出元素框时发生的事情：内容会被修剪，并且其余内容不可见 */
+    overflow: hidden;
 }
+
 .common-list .item:active {
-  /* 背景颜色 */
-    background: white
+    /* 背景颜色 */
+    background: white;
 }
+
 .common-list .item .inner {
-  /* 生成相对定位的元素，相对于其正常位置进行定位。因此，“left：10rpx会向元素的left位置添加10像素 */
+    /* 生成相对定位的元素，相对于其正常位置进行定位。因此，“left：10rpx会向元素的left位置添加10像素 */
     position: relative;
-  /* 上边框 ：宽度 实线边界 颜色 */
+    /* 上边框 ：宽度 实线边界 颜色 */
     border-top: 2rpx solid transparent;
     /* 外边距 */
     margin: 0 40rpx;
@@ -45,17 +45,19 @@
 }
 
 /* 事项信息 */
+
 .common-list .header {
     border-top: 2rpx solid transparent;
     margin: 0 40rpx;
     padding: 20rpx 0;
-    color: #AAA;
+    color: #aaa;
     font-size: 30rpx;
 }
 
 /* icon 图表组件 */
+
 .common-list .item .icon {
-  /* absolute 生成绝对定位的元素 相对于static定位以外的第一个父元素进行定位。元素的位置通过"left""right""top""bottom"属性来定义*/
+    /* absolute 生成绝对定位的元素 相对于static定位以外的第一个父元素进行定位。元素的位置通过"left""right""top""bottom"属性来定义*/
     position: absolute;
     left: 0;
     top: 20rpx;
@@ -71,30 +73,32 @@
     justify-content: center;
     /* 侧轴对齐属性：上下居中对齐 */
     align-items: center;
-
     left: 0;
     top: 10rpx;
     bottom: 10rpx;
     width: 80rpx;
-    /* 右边框： 宽度 实线边界 颜色 */
-    /* border-right: 2rpx solid red; */
+    /* 右边框： 宽度 实线边界 颜色 *//* border-right: 2rpx solid red; */
 }
+
 .common-list .item .inner.with-check .icon {
-    left:50rpx;
+    left: 50rpx;
 }
+
 .common-list .item .content {
     margin-left: 20rpx;
 }
-.common-list .item .inner.with-check .content{
+
+.common-list .item .inner.with-check .content {
     margin-left: 100rpx;
 }
+
 .common-list .item .title {
-  /* 使段落生出行内框：此元素将显示为块级元素，此元素前后会带有换行符 */
+    /* 使段落生出行内框：此元素将显示为块级元素，此元素前后会带有换行符 */
     display: block;
-  /* 内容溢出元素框时发生的事情：内容会被修剪，并且其余内容不可见 */
+    /* 内容溢出元素框时发生的事情：内容会被修剪，并且其余内容不可见 */
     overflow: hidden;
     /* 设置如何处理元素内的空白：空白会被浏览器忽略 */
-    white-space:nowrap;
+    white-space: nowrap;
     /* 文本溢出元素时发生的事情：显示省略符号来代替被修剪的文本 */
     text-overflow: ellipsis;
     /* 字体粗细 */
@@ -107,6 +111,7 @@
 
 /* 
 /* 不知道写的什么 */
+
 /* .mask {
     position: fixed;
     top: 0;
@@ -127,11 +132,14 @@
     margin-top: -200rpx;
     background-color: #FFF;
     /* 圆角边框半径  */
-    /* border-radius: 10rpx;
+
+/* border-radius: 10rpx;
     /* 设置元素的堆叠顺序：高的在前 */
-    /* z-index: 1200;
+
+/* z-index: 1200;
     color: #555;
-}  */ 
+}  */
+
 /* .modal .content {
     overflow: hidden;
     padding: 40rpx;
@@ -153,6 +161,7 @@
     overflow: hidden;
     background: #f9f9f9;
 } */
+
 /* .modal .footer .btn {
     height: 100rpx;
     width: 100%;
@@ -165,7 +174,7 @@
 }
 .modal .footer .btn:active {
     background-color: #DDD;
-} */ 
+} */
 
 /* .modal .level {
     display: flex;
@@ -179,16 +188,17 @@
  */
 
 /*action sheet*/
+
 /* .actionItem  {
     color: #555;
     font-size: 36rpx;
 }
 .actionItem.cancel {
     color: #888
-} */ 
-
+} */
 
 /*update panel style*/
+
 .updatePanel {
     position: fixed;
     top: 0;
@@ -197,8 +207,9 @@
     right: 0;
     background: whitesmoke;
     overflow: hidden;
-    z-index: 1000
+    z-index: 1000;
 }
+
 /* .updatePanel .title {
     font-size: 48rpx;
     font-weight: lighter;
@@ -206,14 +217,15 @@
     padding: 20rpx 0;
     margin-bottom: 20rpx;
 } */
-.updatePanel input,
-.updatePanel textarea {
+
+.updatePanel input, .updatePanel textarea {
     background: #eeeff3;
     padding: 20rpx;
     font-size: 36rpx;
     width: auto;
     color: #7a7a7f;
 }
+
 .updatePanel textarea {
     border-top: 2rpx solid #747478;
 }
@@ -236,6 +248,7 @@
     border-radius: 50%;
     margin: 0 60rpx;
 } */
+
 .updatePanel .footer {
     position: fixed;
     display: flex;
@@ -247,6 +260,7 @@
     /* border: 2rpx solid #333;  */
     background: #f9f9f9;
 }
+
 .updatePanel .footer .btn {
     flex: 1;
     text-align: center;
@@ -255,32 +269,37 @@
     color: #0b0e1d;
     background: #eaedf4;
     border-radius: 20rpx;
-   
 }
+
 .updatePanel .footer .btn:active {
     background: #333;
 }
+
 .updatePanel .footer .btn.primary {
     background: #9bb1fc;
     color: #fffaff;
     /* padding: 10rpx; */
-     margin-left: 8rpx;
+    margin-left: 8rpx;
 }
+
 /* ?? */
+
 .updatePanel .footer .btn.primary:active {
-    background: #D64343
+    background: #d64343;
 }
 
 /* 日历格式 */
+
 .og-calendar {
-  /* 背景颜色 */
+    /* 背景颜色 */
     background-color: white;
     color: black;
     /* 内边距 */
     padding: 0 0 20rpx 0;
 }
+
 .og-calendar .header {
-  /* 生成相对定位的元素，相对于其正常位置进行定位。因此，“left：10rpx会向元素的left位置添加10像素 */
+    /* 生成相对定位的元素，相对于其正常位置进行定位。因此，“left：10rpx会向元素的left位置添加10像素 */
     position: relative;
     height: 120rpx;
     /* 行高 */
@@ -289,37 +308,39 @@
     font-size: 35rpx;
     /* 文本对齐方式 */
     text-align: center;
-
-    background: #617fdf
+    background: #617fdf;
 }
-.og-calendar .header .month-pre,
-.og-calendar .header .month-next {
+
+.og-calendar .header .month-pre, .og-calendar .header .month-next {
     position: absolute;
     top: 0;
     width: 120rpx;
-    height: 120rpx
+    height: 120rpx;
 }
+
 .og-calendar .header .btn:active {
-    background: #7c7cce
+    background: #7c7cce;
 }
+
 .og-calendar .header .month-pre {
     left: 0;
 }
+
 .og-calendar .header .month-next {
     right: 0;
 }
-.og-calendar .header .month-pre image,
-.og-calendar .header .month-next image {
-  /* 上部外边距 */
+
+.og-calendar .header .month-pre image, .og-calendar .header .month-next image {
+    /* 上部外边距 */
     margin-top: 30rpx;
     width: 60rpx;
     height: 60rpx;
 }
-.og-calendar .header .date-info text{
-    font-weight: 600;
-    color: white
-}
 
+.og-calendar .header .date-info text {
+    font-weight: 600;
+    color: white;
+}
 
 .og-calendar .week {
     /* border-top: 2rpx solid #333; */
@@ -337,37 +358,41 @@
     /* 内边距 */
     padding: 15rpx 0;
 }
+
 .og-calendar .col text {
-  /* 使段落生出行内框：此元素将显示为块级元素，此元素前后会带有换行符 */
+    /* 使段落生出行内框：此元素将显示为块级元素，此元素前后会带有换行符 */
     display: block;
     width: 60rpx;
     height: 60rpx;
-  /* 字体大小 */
+    /* 字体大小 */
     font-size: 32rpx;
     font-weight: 600;
     line-height: 60rpx;
     /* 边框：宽度 实线边界 颜色透明 */
     border: 2rpx solid transparent;
 }
+
 .og-calendar .body .col text {
-  /* 圆角边框半径 50%是四分之一圆 */
+    /* 圆角边框半径 50%是四分之一圆 */
     border-radius: 50%;
 }
+
 /* 点击之后的边框 */
+
 .og-calendar .body .col.active text {
-  background-color:black;
-    color: #FFF;
+    background-color: black;
+    color: #fff;
     /* border-color: #7B68EE; */
 }
+
 .og-calendar .body .col.old {
-    color: #7A7A7F
-} 
-.og-calendar .body .col.current text,
-.og-calendar .body .col text:active {
-    background-color:#617fdf;
-    color: #FFF;
+    color: #7a7a7f;
 }
 
+.og-calendar .body .col.current text, .og-calendar .body .col text:active {
+    background-color: #617fdf;
+    color: #fff;
+}
 
 /*.og-picker {
     position: absolute;

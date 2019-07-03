@@ -1,75 +1,162 @@
 <!--miniprogram/pages/ui.wxml-->
-  <view class="c"><text>待办</text></view>
-  <view class="a">
+<view class="c">
+    <text>待办事项</text>
+</view>
+<view class="a">
     <view class="a1">
-      <button class="b1" style="background-image:url(./images/button1.png);"></button>
-      <view class="t1"><text></text></view>
-      <view class="date"><text></text></view>
+        <!-- <button class="b1" style="background-image:url(./images/button1.png);"></button> -->
+        <view class="t1">
+            <text></text>
+        </view>
+        <view class="date">
+            <text></text>
+        </view>
     </view>
     <view class="a1">
-      <button class="b1" style="background-image:url(./images/button1.png);"></button>
-      <view class="t1"><text></text></view>
-      <view class="date"><text></text></view>
+        <!-- <button class="b1" style="background-image:url(./images/button1.png);"></button> -->
+        <view class="t1">
+            <text></text>
+        </view>
+        <view class="date">
+            <text></text>
+        </view>
     </view>
     <view class="a1">
-      <button class="b1"style="background-image:url(./images/button1.png);"></button>
-      <view class="t1"><text></text></view>
-      <view class="date"><text></text></view>
+        <!-- <button class="b1"style="background-image:url(./images/button1.png);"></button> -->
+        <view class="t1">
+            <text></text>
+        </view>
+        <view class="date">
+            <text></text>
+        </view>
     </view>
     <view class="a1">
-      <button class="b1" style="background-image:url(./images/button1.png);"></button>
-      <view class="t1"><text></text></view>
-      <view class="date"><text></text></view>
+        <!-- <button class="b1" style="background-image:url(./images/button1.png);"></button> -->
+        <view class="t1">
+            <text></text>
+        </view>
+        <view class="date">
+            <text></text>
+        </view>
     </view>
     <view class="a1">
-      <button class="b1" style="background-image:url(./images/button1.png);"></button>
-      <view class="t1"><text></text></view>
-      <view class="date"><text></text></view>
+        <!-- <button class="b1" style="background-image:url(./images/button1.png);"></button> -->
+        <view class="t1">
+            <text></text>
+        </view>
+        <view class="date">
+            <text></text>
+        </view>
     </view>
     <view class="a1">
-    <button class="b1" style="background-image:url(./images/button1.png);"></button>
-      <view class="t1"><text></text></view>
-      <view class="date"><text></text></view>
+        <!-- <button class="b1" style="background-image:url(./images/button1.png);"></button> -->
+        <view class="t1">
+            <text></text>
+        </view>
+        <view class="date">
+            <text></text>
+        </view>
     </view>
-  </view>
+    <view class="a1">
+        <!-- <button class="b1" style="background-image:url(./images/button1.png);"></button> -->
+        <view class="t1">
+            <text></text>
+        </view>
+        <view class="date">
+            <text></text>
+        </view>
+    </view>
+    <view class="a1">
+        <!-- <button class="b1" style="background-image:url(./images/button1.png);"></button> -->
+        <view class="t1">
+            <text></text>
+        </view>
+        <view class="date">
+            <text></text>
+        </view>
+    </view>
+    <view class="a1">
+        <!-- <button class="b1" style="background-image:url(./images/button1.png);"></button> -->
+        <view class="t1">
+            <text></text>
+        </view>
+        <view class="date">
+            <text></text>
+        </view>
+    </view>
+    <view class="a1">
+        <!-- <button class="b1" style="background-image:url(./images/button1.png);"></button> -->
+        <view class="t1">
+            <text></text>
+        </view>
+        <view class="date">
+            <text></text>
+        </view>
+    </view>
+</view>
 
 
-  <view class="c"><text>已完成</text></view>
-  <view class="done">
-   <view class="a1">
-   <button class="b1" style="background-image:url(./images/button2.png);"></button>
-   <view class="t1"><text></text></view>
-   <view class="date"><text></text></view>
-  </view>
-   <view class="a1">
-   <button class="b1" style="background-image:url(./images/button2.png);"></button>
-   <view class="t1"><text></text></view>
-   <view class="date"><text></text></view>
-  </view>
-   <view class="a1">
-   <button class="b1" style="background-image:url(./images/button2.png);"></button>
-   <view class="t1"><text></text></view>
-   <view class="date"><text></text></view>
-  </view>
-   <view class="a1">
-   <button class="b1" style="background-image:url(./images/button2.png);"></button>
-   <view class="t1"><text></text></view>
-   <view class="date"><text></text></view>
-  </view>
-   <view class="a1">
-   <button class="b1" style="background-image:url(./images/button2.png);"></button>
-   <view class="t1"><text></text></view>
-   <view class="date"><text></text></view>
-  </view>
-   <view class="a1">
-   <button class="b1" style="background-image:url(./images/button2.png);"></button>
-   <view class="t1"><text></text></view>
-   <view class="date"><text></text></view>
-  </view>
-  </view>
+<!-- <view class="c">
+    <text>已完成</text>
+</view>
+<view class="done">
+    <view class="a1">
+        <button class="b1" style="background-image:url(./images/button2.png);"></button>
+        <view class="t1">
+            <text></text>
+        </view>
+        <view class="date">
+            <text></text>
+        </view>
+    </view>
+    <view class="a1">
+        <button class="b1" style="background-image:url(./images/button2.png);"></button>
+        <view class="t1">
+            <text></text>
+        </view>
+        <view class="date">
+            <text></text>
+        </view>
+    </view>
+    <view class="a1">
+        <button class="b1" style="background-image:url(./images/button2.png);"></button>
+        <view class="t1">
+            <text></text>
+        </view>
+        <view class="date">
+            <text></text>
+        </view>
+    </view>
+    <view class="a1">
+        <button class="b1" style="background-image:url(./images/button2.png);"></button>
+        <view class="t1">
+            <text></text>
+        </view>
+        <view class="date">
+            <text></text>
+        </view>
+    </view>
+    <view class="a1">
+        <button class="b1" style="background-image:url(./images/button2.png);"></button>
+        <view class="t1">
+            <text></text>
+        </view>
+        <view class="date">
+            <text></text>
+        </view>
+    </view>
+    <view class="a1">
+        <button class="b1" style="background-image:url(./images/button2.png);"></button>
+        <view class="t1">
+            <text></text>
+        </view>
+        <view class="date">
+            <text></text>
+        </view>
+    </view>
+</view>
 
-  <view class="a3"  style="position:fixed; bottom:0px;">
-  <input class="t2" type="text" placeholder="准备做什么？"></input>
-  <button class="b2" style="background-image:url(./images/button3.png);"></button>
-  </view>
-
+<view class="a3" style="position:fixed; bottom:0px;">
+    <input class="t2" type="text" placeholder="准备做什么？"></input>
+    <button class="b2" style="background-image:url(./images/button3.png);"></button>
+</view> -->
