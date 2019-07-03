@@ -1,15 +1,15 @@
 <view class="show-item">
-  <view class="title">内容</view>
-  <view class="content">
-    <text>{{item.content}}</text>
-  </view>
+    <view class="title">内容</view>
+    <view class="content">
+        <text>{{item.content}}</text>
+    </view>
 </view>
 
 <view class="show-item">
-  <view class="title">时间</view>
-  <view class="content">
-    <text>{{item.title}}</text>
-  </view>
+    <view class="title">时间</view>
+    <view class="content">
+        <text>{{item.title}}</text>
+    </view>
 </view>
 
 <!-- <view class="show-item">
@@ -22,15 +22,15 @@
 </view> -->
 
 <view class="show-item">
-  <view class="title">事项日期</view>
-  <view class="content">
-    <text>{{item.year}}年{{item.month+1}}月{{item.date}}日</text>
-  </view>
+    <view class="title">事项日期</view>
+    <view class="content">
+        <text>{{item.year}}年{{item.month+1}}月{{item.date}}日</text>
+    </view>
 </view>
 
 <view class="show-item">
-  <view class="title">添加日期</view>
-  <view class="content">
-    <text>{{item.addDate}}</text>
-  </view>
+    <view class="title">添加日期</view>
+    <view class="content">
+        <text>{{item.addDate}}</text>
+    </view>
 </view>

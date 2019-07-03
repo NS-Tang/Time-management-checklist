@@ -8,15 +8,14 @@
     padding: 40rpx 30rpx;
     border-bottom: 2rpx solid #e7e8ea;
 }
+
 .show-item .title {
-    /* position: absolute; */
-    /* left: 20rpx; */
+    /* position: absolute; *//* left: 20rpx; */
     width: 150rpx;
     color: #828282;
-    
 }
-.show-item .title,
-.show-item .content {
+
+.show-item .title, .show-item .content {
     font-size: 32rpx;
 }
 

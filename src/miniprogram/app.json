@@ -1,38 +1,38 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib",
-    "pages/calendar/calendar",
-    "pages/detail/detail",
-    "pages/openapi/openapi" 
-  ],
-  "window": {
-    "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#617fdf",
-    "navigationBarTitleText": "任务管理清单",
-    "navigationBarTextStyle": "white"
-  },
-  "tabBar":{
-    "list":[
-      {
-        "pagePath":"pages/index/index",
-        "text":"任务清单",
-        "iconPath":"images/checklist.png",
-        "selectedIconPath":"images/checklist1.png"
-      },
-      {
-        "pagePath": "pages/calendar/calendar",
-        "text": "行事历",
-        "iconPath": "images/calendar.png",
-        "selectedIconPath": "images/calendar1.png"
-      }
-    ]
-  },
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/index/index",
+        "pages/userConsole/userConsole",
+        "pages/storageConsole/storageConsole",
+        "pages/databaseGuide/databaseGuide",
+        "pages/addFunction/addFunction",
+        "pages/deployFunctions/deployFunctions",
+        "pages/chooseLib/chooseLib",
+        "pages/calendar/calendar",
+        "pages/detail/detail",
+        "pages/openapi/openapi"
+    ],
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#617fdf",
+        "navigationBarTitleText": "任务管理清单",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "任务清单",
+                "iconPath": "images/checklist.png",
+                "selectedIconPath": "images/checklist1.png"
+            },
+            {
+                "pagePath": "pages/calendar/calendar",
+                "text": "行事历",
+                "iconPath": "images/calendar.png",
+                "selectedIconPath": "images/calendar1.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
 }

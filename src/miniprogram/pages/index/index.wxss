@@ -1,98 +1,107 @@
 /* miniprogram/pages/ui.wxss */
 
 /*一行view*/
-.a1{
-  text-align: left;
-  border-bottom: solid gray  1px;
-  display:flex;
-  margin:10px 8px;
-  height: 30px;
-  padding-right: 15px;
-  
+
+.a1 {
+    text-align: left;
+    border-bottom: solid gray 1px;
+    display: flex;
+    margin: 10px 8px;
+    height: 30px;
+    padding-right: 15px;
 }
 
 /*待办事项部分的文本框及按钮*/
-.a{
-  width:100%;
-  margin-bottom: 20px;
+
+.a {
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .b1 {
-  width:20px;
-  height: 20px;
-  background-size: 20px 20px;
-  background-repeat:no-repeat;
-  border:none;
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    border: none;
 }
 
-.t1{
-  width: 230px;
-  height:30px;
-  color: black;
-  font-size: 17px;
+.t1 {
+    width: 230px;
+    height: 30px;
+    color: black;
+    font-size: 17px;
 }
 
-.date{
-  width: 80px;
-  text-align: right;
-  height:30px;
-  font-weight: normal;
-  font-size: 15px;
+.date {
+    width: 80px;
+    text-align: right;
+    height: 30px;
+    font-weight: normal;
+    font-size: 15px;
 }
 
 /*文本*/
-.c{
-  background-color:#BFEFFF;
-  display: flex;
-  font-size: 13px;
-  padding:5px;
-  color: #617fdf;
+
+.c {
+    background-color: #bfefff;
+    display: flex;
+    font-size: 13px;
+    padding: 5px;
+    color: #617fdf;
 }
 
 /*底部文本框及按钮*/
-.a3{
-  background: aliceblue;
-  display:flex;
-  height:30px;
-  width:100%;
-  border-top: gray 1px;
-  padding-top: 5px;
+
+.a3 {
+    background: aliceblue;
+    display: flex;
+    height: 30px;
+    width: 100%;
+    border-top: gray 1px;
+    padding-top: 5px;
 }
-.b2{
-  height:30px;
-  width:30px;
-  background-size: 20px 20px;
-  background-repeat:no-repeat;
-  border:none;
+
+.b2 {
+    height: 30px;
+    width: 30px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    border: none;
 }
-.t2{
-  padding-left: 20px;
-  width:90%;
-  height:30px;
-  background: aliceblue;
-  font-size: 15px;
+
+.t2 {
+    padding-left: 20px;
+    width: 90%;
+    height: 30px;
+    background: aliceblue;
+    font-size: 15px;
 }
 
 /*已完成部分*/
-.t3{
-  width: 230px;
-  height:30px;
-  color: gray;
+
+.t3 {
+    width: 230px;
+    height: 30px;
+    color: gray;
 }
-.done .date{
-  width: 80px;
-  text-align: right;
-  height:30px;
-  color:#DBDBDB;
+
+.done .date {
+    width: 80px;
+    text-align: right;
+    height: 30px;
+    color: #dbdbdb;
 }
-.done .t1{
-  width: 230px;
-  height:30px;
-  color:#DBDBDB;
+
+.done .t1 {
+    width: 230px;
+    height: 30px;
+    color: #dbdbdb;
 }
+
 .done .b1 {
-  border-right: 2px solid gray;
-  background-size: 20px 20px;
-  background-repeat:no-repeat;
-  border:none;
+    border-right: 2px solid gray;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    border: none;
 }
