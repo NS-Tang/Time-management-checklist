@@ -304,11 +304,16 @@ Page({
 
 /**
  * 显示事项数据添加更新面板
+ * 主要靠translateY来控制垂直方向的移动动画，刚进入页面的时候获取屏幕的高度，把面板的高度设置与屏幕高度一致，上滑的时候100%就刚好覆盖整个屏幕
  */
 function showUpdatePanel() {
+    //wx.createAnimation(object) 创建一个动画实例animation。调用实例的方法来描述动画。最后通过动画实例的export方法导出动画数据传递给组件的animation属性。
+    //调用动画操作方法后要调用 step() 来表示一组动画完成，可以在一组动画中调用任意多个动画方法，一组动画中的所有动画会同时开始，一组动画完成后才会进行下一组动画。step 可以传入一个跟 wx.createAnimation() 一样的配置参数用于指定当前组动画的属性
     let animation = wx.createAnimation({
-        duration: 600
+        duration: 600 //动画持续时间 ms默认值是400
     });
+    //Animation.translateY(number translation) translation在 Y 轴平移的距离，单位为 px   对 Y 轴平移 translation为正时向Y轴正方向移动
+    //step()函数表示一组动画已经完成
     animation.translateY('-100%').step();
     this.setData({
         updatePanelAnimationData: animation.export()
@@ -342,9 +347,11 @@ function closeModal() {
  * 关闭事项数据添加更新面板
  */
 function closeUpdatePanel() {
+    //wx.creatAnimation()
     let animation = wx.createAnimation({
         duration: 600
     });
+    //step()函数表示一组动画已经完成
     animation.translateY('100%').step();
     this.setData({
         updatePanelAnimationData: animation.export()
@@ -361,6 +368,9 @@ function loadItemListData() {
         date
     } = this.data.data.selected;
     let _this = this;
+    //DataService.findByDate() 根据日期查找所有符合条件的事项记录 参数为{ Date } date日期对象 返回值为{ Array } 事项集合
+    //Date.parse(datestring) parse() 方法可解析一个日期时间字符串，并返回 1970/1/1 午夜距离该日期时间的毫秒数 该方法是 Date 对象的静态方法。一般采用 Date.parse() 的形式来调用，而不是通过 dateobject.parse() 调用该方法。
+    //arrayObject.join(separator) join() 方法用于把数组中的所有元素放入一个字符串 返回一个字符串。该字符串是通过把 arrayObject 的每个元素转换为字符串，然后把这些字符串连接起来，在两个元素之间插入 separator 字符串而生成的。
     DataService.findByDate(new Date(Date.parse([year, month, date].join('-')))).then((data) => {
         _this.setData({
             itemList: data
@@ -377,6 +387,7 @@ function resetItemListDataCheck() {
     for (let i = 0, len = data.length; i < len; i++) {
         data[i]['checked'] = false;
     }
+    //setDate() 设置 Date 对象中月的某一天 (1 ~ 31)。 
     this.setData({
         itemList: data
     });
@@ -400,11 +411,13 @@ function changeDate(targetDate) {
 
     let data = []; //data作用域changeDate(targetDate)
 
-    showDate = date.getDate(); //库函数
-    showMonth = date.getMonth() + 1; //库函数
-    showYear = date.getFullYear(); //库函数
-    showDay = date.getDay(); //库函数
+    showDate = date.getDate(); //库函数 getDate() 从 Date 对象返回一个月中的某一天 (1 ~ 31)。
+    showMonth = date.getMonth() + 1; //库函数 getMonth() 从 Date 对象返回月份 (0 ~ 11)。
+    showYear = date.getFullYear(); //库函数 getFullYear() 从 Date 对象以四位数字返回年份。
+    showDay = date.getDay(); //库函数 getDay() 从 Date 对象返回一周中的某一天 (0 ~ 6)。
 
+    //getDay() 从 Date 对象返回一周中的某一天 (0 ~ 6)。
+    //setDate() 设置 Date 对象中月的某一天 (1 ~ 31)。
     showMonthDateCount = new Date(showYear, showMonth, 0).getDate();
     date.setDate(1);
     showMonthFirstDateDay = date.getDay(); //当前显示月份第一天的星期
@@ -429,18 +442,21 @@ function changeDate(targetDate) {
     afterYear = showMonth === 12 ? showYear + 1 : showYear;
 
     //获取上一页的显示天数
+    //showMonthFirstDataDay为当前显示月份第一天的星期
     if (showMonthFirstDateDay != 0)
         beforeDayCount = showMonthFirstDateDay - 1;
     else
         beforeDayCount = 6;
 
     //获取下页的显示天数
+    //showMonthLastDataDay为当前显示月份最后一天的星期 
     if (showMonthLastDateDay != 0)
         afterDayCount = 7 - showMonthLastDateDay;
     else
         showMonthLastDateDay = 0;
 
     //如果天数不够6行，则补充完整
+    //showMonthDateCount为当前月份的总天数 beforeDayCount为上个月在本页显示的天数 afterDayCount为下一个月再本月显示的天数
     let tDay = showMonthDateCount + beforeDayCount + afterDayCount;
     if (tDay <= 35)
         afterDayCount += (42 - tDay); //6行7列 = 42
@@ -477,9 +493,14 @@ function changeDate(targetDate) {
     let dates = [];
     let _id = 0; //为wx:key指定
 
+    /**
+     *将日历表中该页显示的所有日期存入数组中
+     */
     if (beforeDayCount > 0) {
+        //getDate() 从 Date 对象返回一个月中的某一天 (1 ~ 31)
         beforeMonthDayCount = new Date(beforeYear, beforMonth, 0).getDate();
         for (let fIdx = 0; fIdx < beforeDayCount; fIdx++) {
+            //arrayObject.unshift(newelement1,newelement2,....,newelementX) unshift() 方法可向数组的开头添加一个或更多元素，并返回新的长度
             dates.unshift({
                 _id: _id,
                 year: beforeYear,
@@ -491,6 +512,7 @@ function changeDate(targetDate) {
     }
 
     for (let cIdx = 1; cIdx <= showMonthDateCount; cIdx++) {
+        //arrayObject.push(newelement1,newelement2,....,newelementX) push() 方法可向数组的末尾添加一个或多个元素，并返回新的长度
         dates.push({
             _id: _id,
             active: (selected['year'] == showYear && selected['month'] == showMonth && selected['date'] == cIdx), //选中状态判断
@@ -520,5 +542,6 @@ function changeDate(targetDate) {
         data: data,
         pickerDateValue: showYear + '-' + showMonth
     });
+    // 加载事项列表数据
     loadItemListData.call(this);
 }
