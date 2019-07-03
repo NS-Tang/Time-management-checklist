@@ -55,13 +55,13 @@ Page({
     onReady() {
         loadItemListData.call(this);
     },
-
-    datePickerChangeEvent(e) { //日期选择器 value 改变时触发 change 事件
+    /**日期选择器 value 改变时触发 change 事件 */
+    datePickerChangeEvent(e) {
         const date = new Date(Date.parse(e.detail.value));
         changeDate.call(this, new Date(date.getFullYear(), date.getMonth(), 1));
     },
-
-    changeDateEvent(e) { //改变日期
+    /**改变日期 */
+    changeDateEvent(e) {
         const {
             year,
             month
@@ -97,7 +97,7 @@ Page({
         showUpdatePanel.call(this);
         this.setData({
             isEditMode: true
-        });//进入编辑模式
+        }); //进入编辑模式
     },
 
     closeUpdatePanelEvent() {
@@ -108,7 +108,7 @@ Page({
     editClickEvent() {
         this.setData({
             isEditMode: true
-        });//进入编辑模式
+        }); //进入编辑模式
     },
 
     /** 事项列表项长按动作事件

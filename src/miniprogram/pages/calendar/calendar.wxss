@@ -45,6 +45,7 @@
 }
 
 /* 事项信息 */
+
 .common-list .header {
     border-top: 2rpx solid transparent;
     margin: 0 40rpx;
@@ -110,6 +111,7 @@
 
 /* 
 /* 不知道写的什么 */
+
 /* .mask {
     position: fixed;
     top: 0;
@@ -159,6 +161,7 @@
     overflow: hidden;
     background: #f9f9f9;
 } */
+
 /* .modal .footer .btn {
     height: 100rpx;
     width: 100%;
@@ -185,6 +188,7 @@
  */
 
 /*action sheet*/
+
 /* .actionItem  {
     color: #555;
     font-size: 36rpx;
@@ -221,6 +225,7 @@
     width: auto;
     color: #7a7a7f;
 }
+
 .updatePanel textarea {
     border-top: 2rpx solid #747478;
 }
@@ -243,6 +248,7 @@
     border-radius: 50%;
     margin: 0 60rpx;
 } */
+
 .updatePanel .footer {
     position: fixed;
     display: flex;
@@ -254,6 +260,7 @@
     /* border: 2rpx solid #333;  */
     background: #f9f9f9;
 }
+
 .updatePanel .footer .btn {
     flex: 1;
     text-align: center;
