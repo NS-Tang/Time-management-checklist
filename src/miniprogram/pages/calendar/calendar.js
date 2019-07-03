@@ -7,7 +7,6 @@ import {
 } from '../../utils/util';
 
 Page({
-
     /**事项各项数据.
      * data作用域Page
      */
@@ -16,12 +15,11 @@ Page({
         data: {
             showMonth: ''
         },
-        selectDateText: '',
-        pickerDateValue: '',
-
-        isSelectMode: false,
+        selectDateText: '', //当日date信息
+        pickerDateValue: '', //日期选择器value的值
+        isSelectMode: false, //是否选择模式
         isMaskShow: false,
-        isEditMode: false,
+        isEditMode: false, //是否编辑模式
 
         // modal
         isModalShow: false,
@@ -58,12 +56,12 @@ Page({
         loadItemListData.call(this);
     },
 
-    datePickerChangeEvent(e) {
+    datePickerChangeEvent(e) { //日期选择器 value 改变时触发 change 事件
         const date = new Date(Date.parse(e.detail.value));
         changeDate.call(this, new Date(date.getFullYear(), date.getMonth(), 1));
     },
 
-    changeDateEvent(e) {
+    changeDateEvent(e) { //改变日期
         const {
             year,
             month
@@ -71,6 +69,7 @@ Page({
         changeDate.call(this, new Date(year, parseInt(month) - 1, 1));
     },
 
+    /**点击事务 */
     dateClickEvent(e) {
         const {
             year,
@@ -98,17 +97,18 @@ Page({
         showUpdatePanel.call(this);
         this.setData({
             isEditMode: true
-        });
+        });//进入编辑模式
     },
 
     closeUpdatePanelEvent() {
         closeUpdatePanel.call(this);
     },
 
+    /**编辑事件 */
     editClickEvent() {
         this.setData({
             isEditMode: true
-        });
+        });//进入编辑模式
     },
 
     /** 事项列表项长按动作事件
