@@ -1,5 +1,6 @@
 <!--pages/calendar/calendar.wxml-->
 <view class="wrapper">
+<<<<<<< Updated upstream
   <view class="og-calendar">
     <view class="header">
       <view class="btn month-pre" bindtap="changeDateEvent" data-year="{{data.beforeYear}}" data-month="{{data.beforMonth}}">
@@ -42,6 +43,52 @@
       <block wx:for="{{data.dates}}" wx:key="_id">
         <view bindtap="dateClickEvent" data-year="{{item.year}}" data-month="{{item.month}}" data-date="{{item.date}}" class="col {{data.showMonth == item.month ? '' : 'old'}} {{data.currentDate == item.date && data.currentYear==item.year && data.currentMonth == item.month ? 'current' : ''}} {{item.active ? 'active' : ''}}">
           <text>{{item.date}}</text>
+=======
+    <view class="og-calendar">
+        <view class="header">
+            <view class="btn month-pre" bindtap="changeDateEvent" data-year="{{data.beforeYear}}" data-month="{{data.beforMonth}}">
+                <image src="../../images/prepage.png"></image>
+            </view>
+            <view class="date-info">
+                <picker mode="date" fields="month" value="{{pickerDateValue}}" bindchange="datePickerChangeEvent">
+                    <text wx:if="{{data.showYear}}">{{data.showYear}}年{{data.showMonth > 9 ? data.showMonth : ('0' + data.showMonth)}}月</text>
+                    <text wx:if="{{!data.showYear}}">请选择日期</text>
+                </picker>
+            </view>
+            <view class="btn month-next" bindtap="changeDateEvent" data-year="{{data.afterYear}}" data-month="{{data.afterMonth}}">
+                <image src="../../images/nextpage.png"></image>
+            </view>
+        </view>
+        <view class="week row">
+            <view class="col">
+                <text>一</text>
+            </view>
+            <view class="col">
+                <text>二</text>
+            </view>
+            <view class="col">
+                <text>三</text>
+            </view>
+            <view class="col">
+                <text>四</text>
+            </view>
+            <view class="col">
+                <text>五</text>
+            </view>
+            <view class="col">
+                <text>六</text>
+            </view>
+            <view class="col">
+                <text>日</text>
+            </view>
+        </view>
+        <view class="body row">
+            <block wx:for="{{data.dates}}" wx:key="key">
+                <view bindtap="dateClickEvent" data-year="{{item.year}}" data-month="{{item.month}}" data-date="{{item.date}}" class="col {{data.showMonth == item.month ? '' : 'old'}} {{data.currentDate == item.date && data.currentYear==item.year && data.currentMonth == item.month ? 'current' : ''}} {{item.active ? 'active' : ''}}">
+                    <text>{{item.date}}</text>
+                </view>
+            </block>
+>>>>>>> Stashed changes
         </view>
       </block>
     </view>
@@ -58,6 +105,7 @@
       <text>事项信息</text>
     </view>
 
+<<<<<<< Updated upstream
     <block wx:for="{{itemList}}" wx:key="id">
       <view class="item" bindtap="listItemClickEvent" data-id="{{item._id}}" bindlongtap="listItemLongTapEvent">
         <view class="inner {{isEditMode ? 'with-check' : ''}}">
@@ -66,6 +114,16 @@
             <icon type="success" wx:else color="#9bb1fc" size="20" />
           </view>
           <!--          <image wx:if="{{item.level == 1}}" class="icon" src="../../images/success.png" />
+=======
+        <block wx:for="{{itemList}}" wx:key="id">
+            <view class="item" bindtap="listItemClickEvent" data-id="{{item.key}}" bindlongtap="listItemLongTapEvent">
+                <view class="inner {{isEditMode ? 'with-check' : ''}}">
+                    <view class="checker" wx:if="{{isEditMode}}">
+                        <icon type="circle" wx:if="{{!item.checked}}" color="black" size="20" />
+                        <icon type="success" wx:else color="#9bb1fc" size="20" />
+                    </view>
+                    <!--          <image wx:if="{{item.level == 1}}" class="icon" src="../../images/success.png" />
+>>>>>>> Stashed changes
           <image wx:if="{{item.level == 2}}" class="icon" src="../../images/notice.png" />
           <image wx:if="{{item.level == 3}}" class="icon" src="../../images/fav-round.png" /> -->
           <view class="content">

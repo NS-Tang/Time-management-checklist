@@ -26,12 +26,22 @@ function getDateStr(date) {
  * 生成GUID序列号
  * @returns {string} GUID
  */
+<<<<<<< Updated upstream
 function guid() {
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
     let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
     return v.toString(16);
   });
 }
+=======
+// function guid() {
+//     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+//         let r = Math.random() * 16 | 0,
+//             v = c == 'x' ? r : (r & 0x3 | 0x8);
+//         return v.toString(16);
+//     });
+// }
+>>>>>>> Stashed changes
 
 /**
  * 记录日志
@@ -64,6 +74,7 @@ function promiseHandle(func, options) {
 }
 
 module.exports = {
+<<<<<<< Updated upstream
   formatTime: formatTime,
   guid: guid,
   log: log,
@@ -71,3 +82,12 @@ module.exports = {
   getDateStr: getDateStr,
   formatNumber: formatNumber
 }
+=======
+    formatTime: formatTime,
+    // guid: guid,
+    log: log,
+    promiseHandle: promiseHandle,
+    getDateStr: getDateStr,
+    formatNumber: formatNumber
+}
+>>>>>>> Stashed changes

@@ -10,6 +10,7 @@ Page({
     // levelSelectData: [LEVEL.normal, LEVEL.warning, LEVEL.danger],
   },
 
+<<<<<<< Updated upstream
   onLoad(option) {
     const {
       id
@@ -23,4 +24,20 @@ Page({
       }
     );
   }
+=======
+    
+    onLoad(option) {
+        const {
+            key
+        } = option;
+        let item = DataService.findById(key).then(
+            (item) => {
+                item['addDate'] = getDateStr(new Date(item['addDate']));
+                this.setData({
+                    item: item
+                });
+            }
+        );
+    }
+>>>>>>> Stashed changes
 });

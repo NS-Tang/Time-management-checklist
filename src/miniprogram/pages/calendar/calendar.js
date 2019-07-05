@@ -140,7 +140,7 @@ Page({
                                 break;
                             case '删除':
                                 new DataService({
-                                    _id: id
+                                    key: id
                                 }).delete().then(() => {
                                     loadItemListData.call(_this);
                                 });
@@ -271,7 +271,7 @@ Page({
         //findIndex:JavaScript API
         //查找目标元素，找到就返回元素的位置，找不到就返回-1
         const index = data.findIndex((item) => {
-            return item['_id'] == id;
+            return item['key'] == id;
         });
 
         if (index >= 0) {
@@ -361,7 +361,14 @@ function loadItemListData() {
         date
     } = this.data.data.selected;
     let _this = this;
+<<<<<<< Updated upstream
     DataService.findByDate(new Date(Date.parse([year, month, date].join('-')))).then((data) => {
+=======
+    //DataService.findByDate() 根据日期查找所有符合条件的事项记录 参数为{ Date } date日期对象 返回值为{ Array } 事项集合
+    //Date.parse(datestring) parse() 方法可解析一个日期时间字符串，并返回 1970/1/1 午夜距离该日期时间的毫秒数 该方法是 Date 对象的静态方法。一般采用 Date.parse() 的形式来调用，而不是通过 dateobject.parse() 调用该方法。
+    //arrayObject.join(separator) join() 方法用于把数组中的所有元素放入一个字符串 返回一个字符串。该字符串是通过把 arrayObject 的每个元素转换为字符串，然后把这些字符串连接起来，在两个元素之间插入 separator 字符串而生成的。
+    DataService.findByDate(new Date(year, month, date)).then((data) => {
+>>>>>>> Stashed changes
         _this.setData({
             itemList: data
         });
@@ -457,7 +464,7 @@ function changeDate(targetDate) {
     };
     let selectDateText = selected.year + '年' + formatNumber(selected.month) + '月' + formatNumber(selected.date) + '日';
 
-    //data作用域Page
+    //data作用域changeDate
     data = {
         currentDate: currentDateObj.getDate(), //当天日期第几天
         currentYear: currentDateObj.getFullYear(), //当天年份
@@ -475,41 +482,41 @@ function changeDate(targetDate) {
     };
 
     let dates = [];
-    let _id = 0; //为wx:key指定
+    let key = 0; //为wx:key指定
 
     if (beforeDayCount > 0) {
         beforeMonthDayCount = new Date(beforeYear, beforMonth, 0).getDate();
         for (let fIdx = 0; fIdx < beforeDayCount; fIdx++) {
             dates.unshift({
-                _id: _id,
+                key: key,
                 year: beforeYear,
                 month: beforMonth,
                 date: beforeMonthDayCount - fIdx
             });
-            _id++;
+            key++;
         }
     }
 
     for (let cIdx = 1; cIdx <= showMonthDateCount; cIdx++) {
         dates.push({
-            _id: _id,
+            key: key,
             active: (selected['year'] == showYear && selected['month'] == showMonth && selected['date'] == cIdx), //选中状态判断
             year: showYear,
             month: showMonth,
             date: cIdx
         });
-        _id++;
+        key++;
     }
 
     if (afterDayCount > 0) {
         for (let lIdx = 1; lIdx <= afterDayCount; lIdx++) {
             dates.push({
-                _id: _id,
+                key: key,
                 year: afterYear,
                 month: afterMonth,
                 date: lIdx
             });
-            _id++;
+            key++;
         }
     }
 
