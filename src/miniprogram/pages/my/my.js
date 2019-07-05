@@ -8,16 +8,6 @@ Page({
                 page: "../timeSet/timeSet"
             },
             {
-                id: "deleteDatabase",
-                name: "清空数据库",
-                page: "../deleteDatabase/deleteDatabase"
-            },
-            {
-                id: "feedback",
-                name: "意见反馈",
-                page: "../feedback/feedback"
-            },
-            {
                 id: "about",
                 name: "关于",
                 page: "../about/about"
