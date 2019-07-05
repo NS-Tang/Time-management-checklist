@@ -1,0 +1,13 @@
+<view class="title">
+    选择一个任务
+    <text>在接下来的时间里，专注做这件事</text>
+</view>
+<view class="choose">
+    <view class="tasks {{TabIndex == index ?'Tab':''}}" wx:for="{{tasks}}" data-index="{{index}}"  bindtap="Tab" >
+        <image src="{{item.url}}" />
+            {{item.name}}
+    </view>
+</view>
+<view class="strat">
+    <button bindtap="start">开始计时</button>
+</view>

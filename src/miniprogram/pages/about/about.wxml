@@ -1,0 +1,12 @@
+<view style="display:flex;align-items: center;flex-direction: column">
+    <image class="pic" src="{{src}}" />
+    <text style="margin-top:20px">v1.0.0</text>
+    <text style="margin:20px">
+        “任务管理清单”小程序，旨在帮助用户有效管理日程安排，包括待办事项的备忘，特定日期事项的备注，还有番茄计时功能的实现，帮助使用者更妥善使用时间，高效完成任务
+具体功能：
+          日历界面的实现
+          对具体日期添加事件备注
+          备注事件在任务清单自动罗列
+          番茄计时功能（附带音乐播放）。
+    </text>
+</view>

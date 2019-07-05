@@ -6,7 +6,7 @@ import {
 /**
  * 数据业务类
  */
-class DataSerivce {
+class DataService {
 
     constructor(props) {
         props = props || {};
@@ -89,4 +89,4 @@ class DataSerivce {
     }
 }
 
-module.exports = DataSerivce;
+module.exports = DataService;

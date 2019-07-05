@@ -1,0 +1,24 @@
+<view class="count">
+    <view class="today-count" bindtap="lcStatis">
+        今日番茄数
+        <text>
+            {{Num}}
+        </text>
+    </view>
+    <view class="today-count">
+        累计时间
+        <text>
+            {{allNum}}min
+        </text>    
+    </view>
+</view>
+
+<view class="setting">
+    <view class="section">
+        <text class="section__title">任务时长(分钟)</text>
+        <view class="body-view">
+            <slider bindchange="sliderTask" min="1" max="120" show-value value="{{taskTime}}" />
+        </view>
+    </view>
+</view>
+

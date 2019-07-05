@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="timer-main">
+  <view class="timer" >
+    <canvas   canvas-id="round" style="width:100%;height:100%;"></canvas>
+  </view>
+  <view class="audio">
+    <audio  src="{{src}}" id="myAudio"  loop></audio>
+    <image wx:if="{{audioState}}" src='../../images/icon/shengyin.png' bindtap='stop'></image>
+    <image wx:else src='../../images/icon/shengyinguanbi.png' bindtap='play'></image>
+  </view>
+</view>
+<view class="buttons"> 
+    <button wx:if="{{isRunning}}" bindtap="pause" >暂停计时</button>
+    <button wx:else  bindtap="continue">继续计时</button>
+    <button bindtap="giveUp">放弃</button>
+</view>

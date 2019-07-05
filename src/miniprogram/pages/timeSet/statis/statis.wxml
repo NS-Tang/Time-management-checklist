@@ -1,0 +1,33 @@
+<view class="t"><test>番茄次数统计</test></view>
+<view class="all">
+<view class="b">
+<view class="ic"><image src="../../../images/icon/gongzuobao.png" /><text>工作</text></view>
+<view class="num"><text>{{num1}}次</text></view>
+</view>
+
+<view class="a">
+<view class="ic"><image src="../../../images/icon/xuexi.png" /><text>学习</text></view>
+<view class="num"><text>{{num2}}次</text></view>
+</view>
+
+<view class="b">
+<view class="ic"><image src="../../../images/icon/sikao.png" /><text>思考</text></view>
+<view class="num"><text>{{num3}}次</text></view>
+</view>
+
+<view class="a">
+<view class="ic"><image src="../../../images/icon/tubiaozhizuomoban-.png" /><text>写作</text></view>
+<view class="num"><text>{{num4}}次</text></view>
+</view>
+
+<view class="b">
+<view class="ic"><image src="../../../images/icon/ziyuan.png" /><text>运动</text></view>
+<view class="num"><text>{{num5}}次</text></view>
+</view>
+
+<view class="a">
+<view class="ic"><image src="../../../images/icon/yuedu.png" /><text>阅读</text></view>
+<view class="num"><text>{{num6}}次</text></view>
+</view>
+
+</view>

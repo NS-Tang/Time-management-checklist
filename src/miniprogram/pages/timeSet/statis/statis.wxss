@@ -1,0 +1,60 @@
+/* pages/my/statis.wxss */
+.all{
+    
+    width:90%;
+    padding-left:15px; 
+    margin-left:20px;
+    /*padding-left:10px;*/
+    
+}
+
+
+.a{
+    background: aliceblue;
+    width:320px;
+    display: flex;
+    border-bottom:solid gray 1px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+.b{
+    background: white;
+    width:320px;
+    display: flex;
+    border-bottom:solid gray 1px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+.ic{
+    width: 33.3%;
+    text-align: center;
+    font-size: 28rpx;
+    color: #888888;
+    height: 150rpx;
+    margin-bottom: 0px;
+}
+.num{
+    padding-top: 10rpx;
+    width: 66.7%;
+    height: 140rpx;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.t {
+    background-color: #bfefff;
+    display: flex;
+    font-size: 15px;
+    padding: 5px;
+    color: #617fdf;
+}
+.ic image {
+  width: 80rpx;
+  height: 80rpx;
+  display: block;
+  margin: 0 auto;
+}

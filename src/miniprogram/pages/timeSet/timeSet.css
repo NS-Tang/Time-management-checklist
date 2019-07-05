@@ -1,0 +1,33 @@
+page {
+  height: 100%;
+  background-color: #EEEEEE;
+}
+.count {
+  display: flex;
+  flex: 2;
+  height: 100px;
+  background-color: white;
+}
+.count .today-count {
+  margin-top: 50rpx;
+  font-size: 28rpx;
+  text-align: center;
+  flex: 1;
+  color: #808080;
+}
+.count .today-count text {
+  font-size: 48rpx;
+  color: red;
+}
+.setting {
+  margin-top: 15rpx;
+  height: 150px;
+  background-color: white;
+  padding: 20px;
+}
+.setting .section {
+  margin: 10px 0;
+}
+.setting .section .section__title {
+  font-size: 30rpx;
+}

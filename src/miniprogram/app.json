@@ -7,9 +7,16 @@
         "pages/addFunction/addFunction",
         "pages/deployFunctions/deployFunctions",
         "pages/chooseLib/chooseLib",
-        "pages/calendar/calendar",
         "pages/detail/detail",
-        "pages/openapi/openapi"
+        "pages/openapi/openapi",
+        "pages/task/task",
+        "pages/tomato/tomato",
+        "pages/my/my",
+        "pages/timeSet/timeSet",
+        "pages/timeSet/statis/statis",
+        "pages/feedback/feedback",
+        "pages/about/about"
+
     ],
     "window": {
         "backgroundColor": "#F6F6F6",
@@ -19,20 +26,33 @@
         "navigationBarTextStyle": "white"
     },
     "tabBar": {
+
         "list": [
             {
                 "pagePath": "pages/index/index",
-                "text": "任务清单",
-                "iconPath": "images/checklist.png",
-                "selectedIconPath": "images/checklist1.png"
-            },
-            {
-                "pagePath": "pages/calendar/calendar",
                 "text": "行事历",
                 "iconPath": "images/calendar.png",
                 "selectedIconPath": "images/calendar1.png"
+            },
+            {
+                "pagePath": "pages/task/task",
+                "text": "计时",
+                "iconPath": "images/icon/clock.png",
+                "selectedIconPath": "images/icon/clock1.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "images/ic_action_user_normal.png",
+                "selectedIconPath": "images/ic_action_user_selected.png"
             }
         ]
+    },
+    "plugins": {
+        "sdkPlugin": {
+            "version": "2.2.0",
+            "provider": "wxc6b86e382a1e3294"
+        }
     },
     "sitemapLocation": "sitemap.json"
 }
