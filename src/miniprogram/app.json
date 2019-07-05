@@ -14,7 +14,6 @@
         "pages/my/my",
         "pages/timeSet/timeSet",
         "pages/timeSet/statis/statis",
-        "pages/feedback/feedback",
         "pages/about/about"
 
     ],
